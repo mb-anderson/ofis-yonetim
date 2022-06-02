@@ -19,12 +19,12 @@ namespace HukukBurosu
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            groupBoxGozetimPaneli.Visible = false;
-            metroGridDoldur(metroGridDurusmalar, "durusmalar", "muvekkil, vekil, tarih");
+            metroTileGozetimPaneli_Click(metroTileGozetimPaneli, new EventArgs());
             anasayfaGrafik();
             metroTileGozetimPaneli_Click(metroTileGozetimPaneli, new EventArgs());
             metroTileGozetimPaneli.UseSelectable = false;
@@ -40,12 +40,12 @@ namespace HukukBurosu
             this.DragEnter += new DragEventHandler(metroButtonDosyaYukle_DragEnter);
             this.DragDrop += new DragEventHandler(metroButtonDosyaYukle_DragDrop);
         }
-        private DataSet veritabaniSelect(String tabloAdi, String kolon = "*", String where = "", String aranan = "")
+        private DataSet veritabaniSelectForDataGrid(String tabloAdi, String kolon = "*", String where = "")
         {
             String sorguStringi = "Select " + kolon + " from " + tabloAdi;
-            if (!where.Equals("") && !where.Equals(""))
+            if (!where.Equals(""))
             {
-                sorguStringi += " WHERE " + where + "='" + aranan + "'" ;
+                sorguStringi += " WHERE " + where;
             }
             OleDbConnection baglanti;
             OleDbDataAdapter sorgu;
@@ -110,122 +110,164 @@ namespace HukukBurosu
             return null;
         }
 
-         private void metroGridDoldur(MetroFramework.Controls.MetroGrid metroGrid, String tabloAdi, String kolonlar)
+        private bool veritabaniSelect(String tabloAdi, String kolon = "*", String where = "")
         {
-            DataSet veri = veritabaniSelect(tabloAdi, kolonlar);
-            metroGrid.DataSource = veri.Tables[tabloAdi];
- 
+            bool result = false;
+            String sorguStringi = "Select " + kolon + " from " + tabloAdi;
+            if (!where.Equals(""))
+            {
+                sorguStringi += " WHERE " + where;
+            }
+            OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath);
+            OleDbCommand komut = new OleDbCommand(sorguStringi, baglanti);
+            baglanti.Open();
+            OleDbDataReader dataReader = komut.ExecuteReader();
+            if (dataReader.Read())
+            {
+                result = true;
+                baglanti.Close();
+            }
+            return result;
         }
 
-         void anasayfaGrafik()
-         {
-             int[] gelenPara = veritabaniDiziyeAktar("muhasebe_defteri", "tahsil_edilen");
-             int[] gidenPara = veritabaniDiziyeAktar("muhasebe_defteri", "gider");
-             veritabaniDiziyeAktar("muhasebe_defteri", "tarih");
-             double netDurum, gelir = 0, gider = 0;
-             for (int i = 0; i < gelenPara.Length; i++)
-             {
-                 if(gelenPara[i] != 0){
-                     double doubleGelenPara = Convert.ToDouble(gelenPara[i]);
-                     gelir += doubleGelenPara;
-                     chartGozetimPaneli.Series["Bu Ay Tahsil Edilen Miktar"].Points.Add(doubleGelenPara);
-                 }
-                 
-             }
-             for (int i = 0; i < gidenPara.Length; i++)
-             {
-                 if(gidenPara[i] != 0){
-                     double doubleGidenPara = Convert.ToDouble(gidenPara[i]);
-                     gider += doubleGidenPara;
-                     chartGozetimPaneli.Series["Bu Ay Harcanan Miktar"].Points.Add(doubleGidenPara);
-                 }
-                 
-             }
-
-             for (int i = 0; i < this.dates.Length; i++)
-             {
-                 if (this.dates[i] > new DateTime())
-                 {
-                     chartGozetimPaneli.Series["Bu Ay Harcanan Miktar"].Points[i].AxisLabel = this.dates[i].ToString("MMMM dd yyyy");
-                 }
-
-             }
-
-             netDurum = gelir - gider;
-             metroLabelNetDurum.Text = "Net Durum: " + netDurum.ToString() + "₺";
-
-             metroLabelGelir.Text = gelir.ToString() + "₺";
-             metroLabelGider.Text = gider.ToString() + "₺";
-             
-         }
-
-         private void menuSec(MetroFramework.Controls.MetroTile metroTile)
-         {
-             groupBoxGozetimPaneli.Visible = false;
-             groupBoxCalisanlar.Visible = false;
-             groupBoxEvraklar.Visible = false;
-
-             switch (metroTile.Text)
-             {
-                 case "Gözetim Paneli":
-                     groupBoxGozetimPaneli.Visible = true;
-                     this.Text = "Gözetim Paneli";
-                     break;
-                 case "Çalışanlar":
-                     groupBoxCalisanlar.Visible = true;
-                     this.Text = "Çalışanlar";
-                     break;
-                 case "Evraklar":
-                     groupBoxEvraklar.Visible = true;
-                     this.Text = "Evraklar";
-                     dirListBoxEvraklar_SelectedIndexChanged(dirListBoxEvraklar, new EventArgs());
-                     break;
-                 case "Müvekkiller":
-                     //groupBoxCalisanlar.Visible = true;
-                     this.Text = "Müvekkiller";
-                     break;
-                 case "Tebligatlar":
-                     //groupBoxCalisanlar.Visible = true;
-                     this.Text = "Tebligatlar";
-                     break;
-                 case "Bilgi":
-                     //groupBoxCalisanlar.Visible = true;
-                     this.Text = "Bilgi";
-                     break;
-             }
-
-         }
-
-         private void excelAktar(MetroFramework.Controls.MetroGrid dataGridView)
-         {
-             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
-             Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
-             Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-             app.Visible = true;
-             worksheet = workbook.Sheets["Sayfa1"];
-             worksheet = workbook.ActiveSheet;
-             worksheet.Name = "Exported from gridview";
-             for (int i = 1; i < dataGridView.Columns.Count + 1; i++)
-             {
-                 worksheet.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
-             }
-             for (int i = 0; i < dataGridView.Rows.Count - 1; i++)
-             {
-                 for (int j = 0; j < dataGridView.Columns.Count; j++)
-                 {
-                     worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value.ToString();
-                 }
-             }
-             workbook.SaveAs("c:\\tablo.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-             app.Quit();
-             MetroFramework.MetroMessageBox.Show(this, "Tablo Başarıyla Excel Dosyası Olarak Dışarı Aktarıldı");
-         }
-
+        public void veritabaniInsert(String tabloAdi, String kolonlar, String degerler)
+        {
+            String sorguStringi = "Insert Into " + tabloAdi + " (" + kolonlar + ") values (" + degerler + ")";
+            OleDbConnection baglanti;
+            baglanti = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0; Data Source=" + databasePath);
+            baglanti.Open();
+            OleDbCommand komut = new OleDbCommand(sorguStringi,baglanti);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+        }
         
+
+
+        private void metroGridDoldur(MetroFramework.Controls.MetroGrid metroGrid, String tabloAdi, String kolonlar = "*")
+        {
+            DataSet veri = veritabaniSelectForDataGrid(tabloAdi, kolonlar);
+            metroGrid.DataSource = veri.Tables[tabloAdi];
+
+        }
+
+        void anasayfaGrafik()
+        {
+            int[] gelenPara = veritabaniDiziyeAktar("muhasebe_defteri", "tahsil_edilen");
+            int[] gidenPara = veritabaniDiziyeAktar("muhasebe_defteri", "gider");
+            veritabaniDiziyeAktar("muhasebe_defteri", "tarih");
+            double netDurum, gelir = 0, gider = 0;
+            for (int i = 0; i < gelenPara.Length; i++)
+            {
+                if (gelenPara[i] != 0)
+                {
+                    double doubleGelenPara = Convert.ToDouble(gelenPara[i]);
+                    gelir += doubleGelenPara;
+                    chartGozetimPaneli.Series["Bu Ay Tahsil Edilen Miktar"].Points.Add(doubleGelenPara);
+                }
+
+            }
+            for (int i = 0; i < gidenPara.Length; i++)
+            {
+                if (gidenPara[i] != 0)
+                {
+                    double doubleGidenPara = Convert.ToDouble(gidenPara[i]);
+                    gider += doubleGidenPara;
+                    chartGozetimPaneli.Series["Bu Ay Harcanan Miktar"].Points.Add(doubleGidenPara);
+                }
+
+            }
+
+            for (int i = 0; i < this.dates.Length; i++)
+            {
+                if (this.dates[i] > new DateTime())
+                {
+
+                    chartGozetimPaneli.Series["Bu Ay Harcanan Miktar"].Points[i].AxisLabel = this.dates[i].ToString("MMMM dd yyyy");
+                }
+
+            }
+
+            netDurum = gelir - gider;
+            metroLabelNetDurum.Text = "Net Durum: " + netDurum.ToString() + "₺";
+
+            metroLabelGelir.Text = gelir.ToString() + "₺";
+            metroLabelGider.Text = gider.ToString() + "₺";
+
+        }
+
+        private void menuSec(MetroFramework.Controls.MetroTile metroTile)
+        {
+            groupBoxGozetimPaneli.Visible = false;
+            groupBoxCalisanlar.Visible = false;
+            groupBoxEvraklar.Visible = false;
+            groupBoxMuvekkiller.Visible = false;
+            groupBoxTebligatlar.Visible = false;
+
+            switch (metroTile.Text)
+            {
+                case "Gözetim Paneli":
+                    groupBoxGozetimPaneli.Visible = true;
+                    this.Text = "Gözetim Paneli";
+                    break;
+                case "Çalışanlar":
+                    groupBoxCalisanlar.Visible = true;
+                    this.Text = "Çalışanlar";
+                    break;
+                case "Evraklar":
+                    groupBoxEvraklar.Visible = true;
+                    this.Text = "Evraklar";
+                    dirListBoxEvraklar_SelectedIndexChanged(dirListBoxEvraklar, new EventArgs());
+                    break;
+                case "Müvekkiller":
+                    groupBoxMuvekkiller.Visible = true;
+                    this.Text = "Müvekkiller";
+                    break;
+                case "Tebligatlar":
+                    if (!groupBoxUYAPPortal.Visible)
+                    {
+                        groupBoxTebligatlar.Visible = true;
+                    }
+                    this.Text = "Tebligatlar";
+                    break;
+                case "Bilgi":
+                    //groupBoxCalisanlar.Visible = true;
+                    this.Text = "Bilgi";
+                    break;
+            }
+
+        }
+
+        private void excelAktar(MetroFramework.Controls.MetroGrid dataGridView, String ciktiDosyaAdi)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            app.Visible = true;
+            worksheet = workbook.Sheets["Sayfa1"];
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = "Exported from gridview";
+            for (int i = 1; i < dataGridView.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < dataGridView.Rows.Count - 1; i++)
+            {
+                for (int j = 0; j < dataGridView.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            workbook.SaveAs("c:\\" + ciktiDosyaAdi + ".xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            app.Quit();
+            MetroFramework.MetroMessageBox.Show(this, "Tablo Başarıyla Excel Dosyası Olarak Dışarı Aktarıldı");
+        }
+
+
 
         private void metroTileGozetimPaneli_Click(object sender, EventArgs e)
         {
             menuSec(metroTileGozetimPaneli);
+            metroGridDoldur(metroGridDurusmalar, "durusmalar", "muvekkil, vekil, tarih");
         }
 
         private void metroTileCalisanlar_Click(object sender, EventArgs e)
@@ -254,6 +296,7 @@ namespace HukukBurosu
         private void metroTileMuvekkiller_Click(object sender, EventArgs e)
         {
             menuSec(metroTileMuvekkiller);
+            metroGridDoldur(metroGridMuvekkiller, "muvekkiller", "tc_kimlik, ad, soyad, telefon, adres");
         }
 
         private void metroTileTebligatlar_Click(object sender, EventArgs e)
@@ -264,6 +307,7 @@ namespace HukukBurosu
         private void metroTileBilgi_Click(object sender, EventArgs e)
         {
             menuSec(metroTileBilgi);
+            metroGridDoldur(metroGridBilgiRootKullanicilar, "kullanicilar");
         }
 
         private void metroPanelMenu_MouseHover(object sender, EventArgs e)
@@ -284,7 +328,7 @@ namespace HukukBurosu
         }
         private void metroTileGozetimPaneli_MouseEnter(object sender, EventArgs e)
         {
-            metroTileMouseEnter(metroTileGozetimPaneli);   
+            metroTileMouseEnter(metroTileGozetimPaneli);
         }
         private void metroTileGozetimPaneli_MouseLeave(object sender, EventArgs e)
         {
@@ -355,7 +399,7 @@ namespace HukukBurosu
 
         private void metroButtonExcelAktar_Click(object sender, EventArgs e)
         {
-            excelAktar(metroGridCalisanlar);
+            excelAktar(metroGridCalisanlar, metroLabelCalisanlar.Text);
         }
         private void dirListBoxEvraklar_DoubleClick(object sender, EventArgs e)
         {
@@ -384,19 +428,20 @@ namespace HukukBurosu
                 string text = System.IO.File.ReadAllText(@"evraklar\" + fileListBoxEvraklar.SelectedItem);
                 size = text.Length;
             }
-            catch(System.IO.FileLoadException err)
+            catch (System.IO.FileLoadException err)
             {
                 cikti = err.Message;
             }
             finally
             {
-                
-                if(size != -1){
+
+                if (size != -1)
+                {
                     cikti = "Dosya Boyutu: " + (size / 1024).ToString() + "KB";
                 }
-                metroLabelDosyaBoyutu.Text =  cikti;
+                metroLabelDosyaBoyutu.Text = cikti;
             }
-            
+
         }
         private void metroButtonDosyaYukle_DragDrop(object sender, DragEventArgs e)
         {
@@ -439,7 +484,7 @@ namespace HukukBurosu
 
         private void metroButtonDosyaYukle_Click(object sender, EventArgs e)
         {
-           
+
             int size = -1;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
@@ -454,7 +499,7 @@ namespace HukukBurosu
                     System.IO.File.Copy(file, @"evraklar\" + fileName, true);
                     MetroFramework.MetroMessageBox.Show(
                         this,
-                        size/1024 + "KB boyutundaki " + fileName + " dosyası başarıyla " + System.IO.Path.GetFullPath(@"evraklar\") + " konumuna kopyalandı."
+                        size / 1024 + "KB boyutundaki " + fileName + " dosyası başarıyla " + System.IO.Path.GetFullPath(@"evraklar\") + " konumuna kopyalandı."
                         );
                 }
                 catch (System.IO.IOException)
@@ -465,6 +510,60 @@ namespace HukukBurosu
                     dirListBoxEvraklar_SelectedIndexChanged(dirListBoxEvraklar, new EventArgs());
                 }
             }
+        }
+
+        private void metroGridMuvekkiller_SelectionChanged(object sender, EventArgs e)
+        {
+            if (metroGridMuvekkiller.SelectedCells.Count > 0)
+            {
+                metroLabelMuvekkilTC.Text = "TC: " + metroGridMuvekkiller.SelectedCells[0].Value.ToString();
+                metroLabelMuvekkilAd.Text = "İsim: " + metroGridMuvekkiller.SelectedCells[1].Value.ToString();
+                metroLabelMuvekkilSoyad.Text = "Soyisim: " + metroGridMuvekkiller.SelectedCells[2].Value.ToString();
+                metroLabelMuvekkilTelefon.Text = "Telefon: " + metroGridMuvekkiller.SelectedCells[3].Value.ToString();
+            }
+        }
+
+        private void metroButtonMuvekkillerExcelAktar_Click(object sender, EventArgs e)
+        {
+            excelAktar(metroGridMuvekkiller, metroLabelMuvekkiller.Text);
+        }
+
+        private void metroButtonUyapGiris_Click(object sender, EventArgs e)
+        {
+            String tcKimlik = metroTextBoxUyapTCKimlik.Text;
+            String sifre = metroTextBoxUyapSifre.Text;
+            bool uyapKullanicilar = veritabaniSelect(
+                "uyap_kullanicilar",
+                "tc_kimlik, sifre", "tc_kimlik = '" + tcKimlik + "' AND sifre = '" + sifre + "'");
+            if (uyapKullanicilar)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "GİRİŞ BAŞARILI");
+                groupBoxUYAP.Visible = false;
+                groupBoxUyapPortalTebligatDetay.Visible = true;
+                metroGridDoldur(metroGridTebligatDetay, "tebligatlar", "tebligat_no, teblig_tarihi, icerik");
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Kullanıcı Adı veya Şifre Hatalı");
+            }
+        }
+
+        private void metroGridTebligatDetay_SelectionChanged(object sender, EventArgs e)
+        {
+            if (metroGridTebligatDetay.SelectedCells.Count > 0)
+            {
+                metroLabelTebligTarihi.Text = "Tebliğ Tarihi: " + metroGridTebligatDetay.SelectedCells[1].Value.ToString();
+                metroTextBoxTebligatİcerik.Text = metroGridTebligatDetay.SelectedCells[2].Value.ToString();
+                
+            }
+        }
+
+        private void metroButtonKullaniciEkle_Click(object sender, EventArgs e)
+        {
+            String kullaniciAdi = metroTextBoxBilgiKullaniciAdi.Text;
+            String sifre = metroTextBoxBilgiSifre.Text;
+            bool admin = metroCheckBoxBilgiAdmin.Checked;
+            veritabaniInsert("kullanicilar", "kullanici_adi, sifre, admin", "'" + kullaniciAdi + "','" + sifre + "'," + admin.ToString());
         }
     }
 }
