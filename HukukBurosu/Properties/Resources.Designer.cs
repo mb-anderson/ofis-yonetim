@@ -153,6 +153,36 @@ namespace HukukBurosu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Maverahukuk2 {
+            get {
+                object obj = ResourceManager.GetObject("Maverahukuk2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maverahukuk3 {
+            get {
+                object obj = ResourceManager.GetObject("Maverahukuk3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maverahukuk4 {
+            get {
+                object obj = ResourceManager.GetObject("Maverahukuk4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_tie_solid {
             get {
                 object obj = ResourceManager.GetObject("user-tie-solid", resourceCulture);

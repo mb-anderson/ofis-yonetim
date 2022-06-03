@@ -117,47 +117,57 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="chart-line-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\chart-line-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="users-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\users-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="file-lines" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\file-lines.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maverahukuk3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maverahukuk3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maverahukuk2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maverahukuk2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="envelopes-bulk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\envelopes-bulk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-tie-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\user-tie-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow-right-from-bracket" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\arrow-right-from-bracket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circle-info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\circle-info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maverahukuk1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maverahukuk1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maverahukuk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maverahukuk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maverahukuk4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maverahukuk4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIBUAAAEAIAD8CgAAFgAAACgAAAAgAAAAKgAAAAEAIAAAAAAAgAoAAMMOAADDDgAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWHiRAHmk
+        xgB0nr4Id6LDKnikxUt4o8VFeKPFHHagwQF3ocMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdqLBAHij
+        xAB3o8QHeKTFR3ikxqx5pcfpeaXH/Hmlx/p5pcfWeaXHenmkxh6BsdYAd6HCAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHah
+        wwB2oMECeKLEL3mlxqF5pcfyeaXH/3mlx+h5pcemeaXHwXmlx/h5pcf+eaXH0HijxWB3ocMReaXHAHKa
+        ugAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG2V
+        tQCNwOUAd6LDHnmkxod5pcfjeaXH/3mlx+p5pceYeKTGNHeixAN4o8UOeaXHU3mlx7p5pcf3eaXH+Xmk
+        xr93o8VSdqHCDHeixABxl7cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFp6
+        lAB8qcsAdqHCEHikxWV5pMbNeaXH+Xmlx/55pcereaTGN3ijxSB4pMVOeKTGC3ikxkN4pMY0eKPFE3ml
+        x1R5pcfXeaXH/3mlx+95pca2eKTGT3ejxQl4pMYAdZ/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAB3o8QAdZ6+B3eixEh5pMa8eaXH3nmkxnp5pMaveaXH+XmlxkV5pcYOeaXHunmlx+t5pcd1eaXHvXml
+        x+x5pMZOeqbIAHmlx415pcf/eaXHmXmlx6B5pcfmeaXGrnikxj14o8UDeKTGAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAeKPEAHijxBx4o8WdeaXG4Xmlxpp4pMYxdJu8A3mkxp55pcf8eaXHRnmlxhd5pcfbeaXH8Xml
+        x155pcejeaXH/3ikxnB6pskAeaXHg3mlx/94pMZveKPFA3mlx0d5pce4eaXH5Xmkxox5pccUeaXHAAAA
+        AAAAAAAAAAAAAAAAAAB5pMYAeaTGSXmlx/p5pceXdqHCBXijxAB2nb4CeaXGonmlx/x5pcdGeKPEEnmk
+        xph4pMVaeKTGE3ikxi14pMaDeKTGTXmlxwB5pcd/eaXH/3mkxnR5psgAeaTGAHmkxg95pcereaXH+nml
+        x0p5pccAAAAAAAAAAAAAAAAAAAAAAHmlxgB5pcZJeaXH+3mlx4V5pccAd6HCAGuEngF5pMabeaXH/nml
+        x1F8qs0AeKPFHXmlx2p5pcezeaXHpnmlx1V5pMYReaXHAHmlx3x5pcf/eaTGdnmmyAB5pMYAeabIAHml
+        x5B5pcf/eaXHW3mlxwAAAAAAAAAAAAAAAAAAAAAAeaXGAHmlxkx5pcf8eaXHinmlxwB3ocMAaIWjAXmk
+        xpt5pcf/eaXHbnmlx1p5pcfLeaXH1HikxlN4pMZXeaXHz3mlx7l5pcdUeaXHjnmlx/95pMZ5eabIAHik
+        xgAAK00AeaXHmHmlx/95pcddeaXHAAAAAAAAAAAAAAAAAAAAAAB5pMYAeaTGTHmlx/x5pcePeaXHAHeh
+        wwA9LUgAeaTGmHmlx/95pcfoeaXH9nmlxrd4o8UvgK7OAHyt0AB4o8UteaTGtXmlx/Z5pcfweaXH/3ik
+        xnp6psgAeKTGAHyqzAB5pceUeaXH/3mlx1d5pccAAAAAAAAAAAAAAAAAAAAAAHmlxwB5pcdReaXH/Xml
+        x4d5pccAd6DCAIW/5AB5pMaTeaXH/3mlx/R5pMaKeKPEE3ikxgB0nL4AdJ2+AHmlxwB4o8USeaTGg3ml
+        x/B5pcf/eaTGfHmmyAB5pccAeaXHAHmlx495pcf9eaXHUnmlxwAAAAAAAAAAAAAAAAAAAAAAeaXHAHml
+        x1N5pcf9eaXHgXmlxwB2n8AAgbPYAHikxpF5pcfjeaTGXneiwwd3osQAe6PCAHqiwgR6osIEe6PCAHij
+        xAB3ocIEeaTGV3mlx9t5pcd+eaXHAHmlxwB5pccAeaXHjXmlx/15pcdPeaXHAAAAAAAAAAAAAAAAAAAA
+        AAB5pccAeaXHTnmlx/x5pcaBeaXIAHehwgB8qMsAeaTGNnikxjV1nsABd6HDAHmmyQB4o8UeeaXGl3ml
+        xph5pMYpeabIAHikxQBwnL0AeaTGKnmkxS95pccAeaXHAHmlxwB5pceLeaXH/Xmlx055pccAAAAAAAAA
+        AAAAAAAAAAAAAHmlxwB5pcdPeaXH/HmlxoN5pcgAeaXGAAAAAAAAAAAAAAAAAHagwgBznLsBeKTFQnml
+        x8p5pMbeeaXHznmlx9t5pcdeeaXGB3mlxwAAAAAAAAAAAAAAAAB5pccAeaXHAHmlx4l5pcf9eaXHUXml
+        xwAAAAAAAAAAAAAAAAAAAAAAeaXHAHmlx055pcf8eaXHhHmlxwB5pccAAAAAAHOWtAB4o8UAeKPEDnmk
+        xnZ5pcfleaTGs3agwjB5pccceaXHmHmlx+h5pceaeaXHIHqlyAB3o8QAAAAAAHmlxwB5pccAeaXHjnml
+        x/55pcdTeaXHAAAAAAAAAAAAAAAAAAAAAAB5pccAeaXHQnmlx/d5pMaDcpu7AXikxgN4pMYDeKXHAnmk
+        xih5pceseaXH63ikxX13o8QQeaXHAHmkxgB4pMYGeaXHW3mlx9t5pcfLeaXHRnmlxxB5pccReaXHD3mk
+        xgx5pceVeaXH+3mlx0t5pccAAAAAAAAAAAAAAAAAAAAAAHijxQB4o8UieaXG2nmlx9p5pceseaXHrHml
+        x615pceteaXH1nmlx9J4o8VMc529BHagwQAAAAAAAAAAAHikxgBvnsAAeaTGKHmlx6N5pcfieaXHyHml
+        x8h5pcfGeaXHw3mlx+F5pcfleKTGL3ikxgAAAAAAAAAAAAAAAAAAAAAAcpi4AHCTsgJ4o8Q8eKTGanik
+        xmt4pMVreKPFa3ijxWx4o8VleKPFJHmnygB2oMEAAAAAAAAAAAAAAAAAAAAAAHGUtgB5pMYAeKTGDHml
+        xkV5pcdUeaXHUnmlxlZ4pMZYeaXHUXijxT50nr4GdZ6/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////gf///g
+        D///gAP//wAA//wAAD/wABAP4AAQB+EAEYfjCBHH4wABx+OBgcfjg8HH44Zhx+OMOcfj8A/H4+AHx+AB
+        gAfgA+AH4A/wB/////8=
+</value>
   </data>
 </root>

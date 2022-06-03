@@ -9,17 +9,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data.OleDb;
+using System.Runtime.InteropServices;
 
 namespace HukukBurosu
 {
-    public partial class Form1 : MetroForm
+    public partial class Panel : MetroForm
     {
-        String databasePath = "hukukburosu.accdb";
+        private String databasePath = "hukukburosu.accdb";
         public DateTime[] dates = new DateTime[30];
-        public Form1()
+        bool isAdmin = false;
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse
+            );
+
+
+        public Panel(bool isAdmin = false)
         {
             InitializeComponent();
-
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
+            this.isAdmin = isAdmin;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,11 +45,15 @@ namespace HukukBurosu
             metroTileTebligatlar.UseSelectable = false;
             metroTileBilgi.UseSelectable = false;
             metroTileCikis.UseSelectable = false;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             dirListBoxEvraklar.Path = System.IO.Path.GetFullPath("evraklar");
             this.AllowDrop = true;
             this.DragEnter += new DragEventHandler(metroButtonDosyaYukle_DragEnter);
             this.DragDrop += new DragEventHandler(metroButtonDosyaYukle_DragDrop);
+            if (!isAdmin)
+            {
+                metroTileTebligatlar.Enabled = false;
+                metroTileBilgi.Enabled = false;
+            }
         }
         private DataSet veritabaniSelectForDataGrid(String tabloAdi, String kolon = "*", String where = "")
         {
@@ -140,7 +155,38 @@ namespace HukukBurosu
             komut.ExecuteNonQuery();
             baglanti.Close();
         }
-        
+
+        public void veritabaniUpdate(String tabloAdi, String[] kolonlar, String[] degerler, String whereColumn, String whereValue)
+        {
+            String update = "";
+            for (int i = 0; i < kolonlar.Length; i++)
+            {
+                update += kolonlar[i] + " = '" + degerler[i] + "'";
+                if (kolonlar.Length != 1 && i + 1 != kolonlar.Length)
+                {
+                    update += ",";
+                }
+            }
+            String sorguStringi = "Update " + tabloAdi + " Set " + update +
+                " Where " + whereColumn + " = " + whereValue + "";
+            OleDbConnection baglanti;
+            baglanti = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0; Data Source=" + databasePath);
+            baglanti.Open();
+            OleDbCommand komut = new OleDbCommand(sorguStringi, baglanti);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+        }
+
+        public void veritabaniDelete(String tabloAdi, String whereColumn, String whereValue)
+        {
+            String sorguStringi = "Delete From " + tabloAdi + " Where " + whereColumn + "=" + whereValue;
+            OleDbConnection baglanti;
+            baglanti = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0; Data Source=" + databasePath);
+            baglanti.Open();
+            OleDbCommand komut = new OleDbCommand(sorguStringi, baglanti);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+        }
 
 
         private void metroGridDoldur(MetroFramework.Controls.MetroGrid metroGrid, String tabloAdi, String kolonlar = "*")
@@ -192,6 +238,10 @@ namespace HukukBurosu
 
             metroLabelGelir.Text = gelir.ToString() + "₺";
             metroLabelGider.Text = gider.ToString() + "₺";
+            metroGridDoldur(metroGridCalisanlar, "calisanlar", "tc_kimlik, ad_soyad, calisma_sekli, maas, ise_baslama_tarihi");
+            metroLabelGozetimPaneliCalisanSayisi.Text = metroGridCalisanlar.RowCount.ToString() + " Çalışan";
+            metroGridDoldur(metroGridMuvekkiller, "muvekkiller", "tc_kimlik, ad, soyad, telefon, adres");
+            metroLabelGozetimPaneliMuvekkilSayisi.Text = metroGridMuvekkiller.RowCount.ToString() + " Müvekkil";
 
         }
 
@@ -202,6 +252,7 @@ namespace HukukBurosu
             groupBoxEvraklar.Visible = false;
             groupBoxMuvekkiller.Visible = false;
             groupBoxTebligatlar.Visible = false;
+            groupBoxBilgi.Visible = false;
 
             switch (metroTile.Text)
             {
@@ -230,7 +281,7 @@ namespace HukukBurosu
                     this.Text = "Tebligatlar";
                     break;
                 case "Bilgi":
-                    //groupBoxCalisanlar.Visible = true;
+                    groupBoxBilgi.Visible = true;
                     this.Text = "Bilgi";
                     break;
             }
@@ -564,6 +615,74 @@ namespace HukukBurosu
             String sifre = metroTextBoxBilgiSifre.Text;
             bool admin = metroCheckBoxBilgiAdmin.Checked;
             veritabaniInsert("kullanicilar", "kullanici_adi, sifre, admin", "'" + kullaniciAdi + "','" + sifre + "'," + admin.ToString());
+            metroTileBilgi_Click(metroTileBilgi, new EventArgs());
+            MetroFramework.MetroMessageBox.Show(this, "Kullanıcı bilgileri başarıyla EKLENDİ");
+        }
+
+        private void metroGridBilgiRootKullanicilar_SelectionChanged(object sender, EventArgs e)
+        {
+            
+            if (metroGridBilgiRootKullanicilar.SelectedCells.Count > 0)
+            {
+                metroTextBoxBilgiKullaniciAdi.Text = metroGridBilgiRootKullanicilar.SelectedCells[1].Value.ToString();
+                metroTextBoxBilgiSifre.Text = metroGridBilgiRootKullanicilar.SelectedCells[2].Value.ToString();
+                if (metroGridBilgiRootKullanicilar.SelectedCells[3].Value.ToString().ToLower() == "true")
+                {
+                    metroCheckBoxBilgiAdmin.Checked = true;
+                }
+                else
+                {
+                    metroCheckBoxBilgiAdmin.Checked = false;
+                }
+            }
+            
+        }
+
+        private void metroButtonKullaniciGuncellestir_Click(object sender, EventArgs e)
+        {
+            string isAdmin = "Admin Değil";
+            if(metroCheckBoxBilgiAdmin.Checked){
+                isAdmin = "ADMİN";
+            }
+            DialogResult dialogResult = MetroFramework.MetroMessageBox.Show(this,
+                metroLabelKullaniciAdi.Text + ": " + metroTextBoxBilgiKullaniciAdi.Text + ", " +
+                metroLabelSifre.Text + ": " + metroTextBoxBilgiSifre.Text + ", " +
+                metroLabelAdminmi.Text + ": " + isAdmin,
+                metroGridBilgiRootKullanicilar.SelectedCells[1].Value.ToString() + 
+                "kullanıcısını aşağıdaki bilgilerle GÜNCELLEŞTİRMEK istediğinize emin misiniz?",
+                MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                String[] kolonlar = new String[2];
+                kolonlar[0] = "kullanici_adi";
+                kolonlar[1] = "sifre";
+                String[] degerler = new String[kolonlar.Length];
+                degerler[0] = metroTextBoxBilgiKullaniciAdi.Text;
+                degerler[1] = metroTextBoxBilgiSifre.Text;
+                veritabaniUpdate("kullanicilar", kolonlar, degerler, "Kimlik", metroGridBilgiRootKullanicilar.SelectedCells[0].Value.ToString());
+                metroTileBilgi_Click(metroTileBilgi, new EventArgs());
+                MetroFramework.MetroMessageBox.Show(this, "Kullanıcı bilgileri başarıyla GÜNCELLEŞTİRİLDİ");
+            }
+
+        }
+
+        
+        private void metroButtonKullaniciSil_Click(object sender, EventArgs e)
+        {
+            String[] degerler = new String[3];
+            degerler[0] = metroTextBoxBilgiKullaniciAdi.Text;
+            DialogResult dialogResult = MetroFramework.MetroMessageBox.Show(this, "",
+                metroGridBilgiRootKullanicilar.SelectedCells[1].Value.ToString() +
+                " kullanıcısını SİLMEK istediğinize emin misiniz?",
+                MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                veritabaniDelete("kullanicilar", "Kimlik", metroGridBilgiRootKullanicilar.SelectedCells[0].Value.ToString());
+                metroTileBilgi_Click(metroTileBilgi, new EventArgs());
+                MetroFramework.MetroMessageBox.Show(this, "Kullanıcı bilgileri başarıyla SİLİNDİ");
+            }
+            
+
         }
     }
 }

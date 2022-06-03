@@ -1,6 +1,6 @@
 ﻿namespace HukukBurosu
 {
-    partial class Form1
+    partial class Panel
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,36 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Panel));
             this.metroPanelMenu = new MetroFramework.Controls.MetroPanel();
             this.groupBoxGozetimPaneli = new System.Windows.Forms.GroupBox();
             this.metroLabelNetDurum = new MetroFramework.Controls.MetroLabel();
             this.metroGridDurusmalar = new MetroFramework.Controls.MetroGrid();
             this.chartGozetimPaneli = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBoxMuvekkillerGozetim = new System.Windows.Forms.GroupBox();
+            this.metroLabelGozetimPaneliMuvekkilSayisi = new MetroFramework.Controls.MetroLabel();
             this.groupBoxCartGider = new System.Windows.Forms.GroupBox();
             this.metroLabelGider = new MetroFramework.Controls.MetroLabel();
             this.groupBoxCartGelir = new System.Windows.Forms.GroupBox();
             this.metroLabelGelir = new MetroFramework.Controls.MetroLabel();
             this.groupBoxCartCalisanlar = new System.Windows.Forms.GroupBox();
+            this.metroLabelGozetimPaneliCalisanSayisi = new MetroFramework.Controls.MetroLabel();
             this.metroLabelGozetimPaneli = new MetroFramework.Controls.MetroLabel();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.groupBoxCalisanlar = new System.Windows.Forms.GroupBox();
@@ -105,11 +108,18 @@
             this.metroLabelTebligAdresi = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.groupBoxBilgi = new System.Windows.Forms.GroupBox();
+            this.metroCheckBoxBilgiAdmin = new MetroFramework.Controls.MetroCheckBox();
+            this.metroTextBoxBilgiSifre = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBoxBilgiKullaniciAdi = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabelAdminmi = new MetroFramework.Controls.MetroLabel();
+            this.metroButtonKullaniciGuncellestir = new MetroFramework.Controls.MetroButton();
+            this.metroGridBilgiRootKullanicilar = new MetroFramework.Controls.MetroGrid();
+            this.metroButtonKullaniciSil = new MetroFramework.Controls.MetroButton();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroButtonKullaniciEkle = new MetroFramework.Controls.MetroButton();
             this.metroLabelSifre = new MetroFramework.Controls.MetroLabel();
             this.metroLabelKullaniciAdi = new MetroFramework.Controls.MetroLabel();
             this.metroLabelBilgi = new MetroFramework.Controls.MetroLabel();
-            this.pictureBoxBilgiMaveraYazi = new System.Windows.Forms.PictureBox();
             this.metroTileCikis = new MetroFramework.Controls.MetroTile();
             this.metroTileEvrak = new MetroFramework.Controls.MetroTile();
             this.metroTileBilgi = new MetroFramework.Controls.MetroTile();
@@ -118,20 +128,15 @@
             this.metroTileGozetimPaneli = new MetroFramework.Controls.MetroTile();
             this.metroTileCalisanlar = new MetroFramework.Controls.MetroTile();
             this.pictureBoxBilgiMaveraLogo = new System.Windows.Forms.PictureBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroButtonKullaniciSil = new MetroFramework.Controls.MetroButton();
-            this.metroGridBilgiRootKullanicilar = new MetroFramework.Controls.MetroGrid();
-            this.metroButtonKullaniciGüncellestir = new MetroFramework.Controls.MetroButton();
-            this.metroLabelAdminmi = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBoxBilgiKullaniciAdi = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBoxBilgiSifre = new MetroFramework.Controls.MetroTextBox();
-            this.metroCheckBoxBilgiAdmin = new MetroFramework.Controls.MetroCheckBox();
+            this.pictureBoxBilgiMaveraYazi = new System.Windows.Forms.PictureBox();
             this.metroPanelMenu.SuspendLayout();
             this.groupBoxGozetimPaneli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridDurusmalar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGozetimPaneli)).BeginInit();
+            this.groupBoxMuvekkillerGozetim.SuspendLayout();
             this.groupBoxCartGider.SuspendLayout();
             this.groupBoxCartGelir.SuspendLayout();
+            this.groupBoxCartCalisanlar.SuspendLayout();
             this.groupBoxCalisanlar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridCalisanlar)).BeginInit();
             this.groupBoxEvraklar.SuspendLayout();
@@ -145,9 +150,9 @@
             this.groupBoxTebligatDetay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridTebligatDetay)).BeginInit();
             this.groupBoxBilgi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraYazi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridBilgiRootKullanicilar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraYazi)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanelMenu
@@ -163,9 +168,9 @@
             this.metroPanelMenu.HorizontalScrollbarBarColor = true;
             this.metroPanelMenu.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanelMenu.HorizontalScrollbarSize = 10;
-            this.metroPanelMenu.Location = new System.Drawing.Point(0, 7);
+            this.metroPanelMenu.Location = new System.Drawing.Point(0, 5);
             this.metroPanelMenu.Name = "metroPanelMenu";
-            this.metroPanelMenu.Size = new System.Drawing.Size(196, 760);
+            this.metroPanelMenu.Size = new System.Drawing.Size(196, 762);
             this.metroPanelMenu.TabIndex = 1;
             this.metroPanelMenu.UseCustomBackColor = true;
             this.metroPanelMenu.VerticalScrollbarBarColor = true;
@@ -186,9 +191,9 @@
             this.groupBoxGozetimPaneli.Controls.Add(this.groupBoxCartCalisanlar);
             this.groupBoxGozetimPaneli.Controls.Add(this.metroLabelGozetimPaneli);
             this.groupBoxGozetimPaneli.Controls.Add(this.metroDateTime1);
-            this.groupBoxGozetimPaneli.Location = new System.Drawing.Point(895, 687);
+            this.groupBoxGozetimPaneli.Location = new System.Drawing.Point(202, 31);
             this.groupBoxGozetimPaneli.Name = "groupBoxGozetimPaneli";
-            this.groupBoxGozetimPaneli.Size = new System.Drawing.Size(768, 587);
+            this.groupBoxGozetimPaneli.Size = new System.Drawing.Size(839, 727);
             this.groupBoxGozetimPaneli.TabIndex = 2;
             this.groupBoxGozetimPaneli.TabStop = false;
             // 
@@ -217,37 +222,37 @@
             this.metroGridDurusmalar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGridDurusmalar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGridDurusmalar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridDurusmalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridDurusmalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.metroGridDurusmalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGridDurusmalar.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGridDurusmalar.DefaultCellStyle = dataGridViewCellStyle2;
             this.metroGridDurusmalar.EnableHeadersVisualStyles = false;
             this.metroGridDurusmalar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGridDurusmalar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGridDurusmalar.Location = new System.Drawing.Point(392, 250);
             this.metroGridDurusmalar.Name = "metroGridDurusmalar";
             this.metroGridDurusmalar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridDurusmalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridDurusmalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metroGridDurusmalar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGridDurusmalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGridDurusmalar.Size = new System.Drawing.Size(359, 290);
@@ -257,23 +262,23 @@
             // 
             // chartGozetimPaneli
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartGozetimPaneli.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartGozetimPaneli.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartGozetimPaneli.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartGozetimPaneli.Legends.Add(legend1);
             this.chartGozetimPaneli.Location = new System.Drawing.Point(6, 250);
             this.chartGozetimPaneli.Name = "chartGozetimPaneli";
             this.chartGozetimPaneli.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series3.ChartArea = "ChartArea1";
-            series3.Color = System.Drawing.Color.PaleGreen;
-            series3.Legend = "Legend1";
-            series3.Name = "Bu Ay Tahsil Edilen Miktar";
-            series4.ChartArea = "ChartArea1";
-            series4.Color = System.Drawing.Color.Crimson;
-            series4.Legend = "Legend1";
-            series4.Name = "Bu Ay Harcanan Miktar";
-            this.chartGozetimPaneli.Series.Add(series3);
-            this.chartGozetimPaneli.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.PaleGreen;
+            series1.Legend = "Legend1";
+            series1.Name = "Bu Ay Tahsil Edilen Miktar";
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.Crimson;
+            series2.Legend = "Legend1";
+            series2.Name = "Bu Ay Harcanan Miktar";
+            this.chartGozetimPaneli.Series.Add(series1);
+            this.chartGozetimPaneli.Series.Add(series2);
             this.chartGozetimPaneli.Size = new System.Drawing.Size(364, 290);
             this.chartGozetimPaneli.TabIndex = 5;
             this.chartGozetimPaneli.Text = "Bahsi Geçen Dava için:";
@@ -281,6 +286,7 @@
             // groupBoxMuvekkillerGozetim
             // 
             this.groupBoxMuvekkillerGozetim.BackColor = System.Drawing.Color.Orange;
+            this.groupBoxMuvekkillerGozetim.Controls.Add(this.metroLabelGozetimPaneliMuvekkilSayisi);
             this.groupBoxMuvekkillerGozetim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBoxMuvekkillerGozetim.Location = new System.Drawing.Point(580, 117);
             this.groupBoxMuvekkillerGozetim.Name = "groupBoxMuvekkillerGozetim";
@@ -288,6 +294,22 @@
             this.groupBoxMuvekkillerGozetim.TabIndex = 4;
             this.groupBoxMuvekkillerGozetim.TabStop = false;
             this.groupBoxMuvekkillerGozetim.Text = "Müvekkiller";
+            // 
+            // metroLabelGozetimPaneliMuvekkilSayisi
+            // 
+            this.metroLabelGozetimPaneliMuvekkilSayisi.AutoSize = true;
+            this.metroLabelGozetimPaneliMuvekkilSayisi.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabelGozetimPaneliMuvekkilSayisi.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabelGozetimPaneliMuvekkilSayisi.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.metroLabelGozetimPaneliMuvekkilSayisi.Location = new System.Drawing.Point(28, 41);
+            this.metroLabelGozetimPaneliMuvekkilSayisi.Name = "metroLabelGozetimPaneliMuvekkilSayisi";
+            this.metroLabelGozetimPaneliMuvekkilSayisi.Size = new System.Drawing.Size(143, 25);
+            this.metroLabelGozetimPaneliMuvekkilSayisi.Style = MetroFramework.MetroColorStyle.White;
+            this.metroLabelGozetimPaneliMuvekkilSayisi.TabIndex = 2;
+            this.metroLabelGozetimPaneliMuvekkilSayisi.Text = "Müvekkil Sayısı";
+            this.metroLabelGozetimPaneliMuvekkilSayisi.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabelGozetimPaneliMuvekkilSayisi.UseCustomBackColor = true;
+            this.metroLabelGozetimPaneliMuvekkilSayisi.UseCustomForeColor = true;
             // 
             // groupBoxCartGider
             // 
@@ -348,6 +370,7 @@
             // groupBoxCartCalisanlar
             // 
             this.groupBoxCartCalisanlar.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.groupBoxCartCalisanlar.Controls.Add(this.metroLabelGozetimPaneliCalisanSayisi);
             this.groupBoxCartCalisanlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBoxCartCalisanlar.Location = new System.Drawing.Point(392, 117);
             this.groupBoxCartCalisanlar.Name = "groupBoxCartCalisanlar";
@@ -355,6 +378,22 @@
             this.groupBoxCartCalisanlar.TabIndex = 3;
             this.groupBoxCartCalisanlar.TabStop = false;
             this.groupBoxCartCalisanlar.Text = "Çalışanlar";
+            // 
+            // metroLabelGozetimPaneliCalisanSayisi
+            // 
+            this.metroLabelGozetimPaneliCalisanSayisi.AutoSize = true;
+            this.metroLabelGozetimPaneliCalisanSayisi.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabelGozetimPaneliCalisanSayisi.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabelGozetimPaneliCalisanSayisi.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.metroLabelGozetimPaneliCalisanSayisi.Location = new System.Drawing.Point(40, 41);
+            this.metroLabelGozetimPaneliCalisanSayisi.Name = "metroLabelGozetimPaneliCalisanSayisi";
+            this.metroLabelGozetimPaneliCalisanSayisi.Size = new System.Drawing.Size(125, 25);
+            this.metroLabelGozetimPaneliCalisanSayisi.Style = MetroFramework.MetroColorStyle.White;
+            this.metroLabelGozetimPaneliCalisanSayisi.TabIndex = 1;
+            this.metroLabelGozetimPaneliCalisanSayisi.Text = "Çalışan Sayısı";
+            this.metroLabelGozetimPaneliCalisanSayisi.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabelGozetimPaneliCalisanSayisi.UseCustomBackColor = true;
+            this.metroLabelGozetimPaneliCalisanSayisi.UseCustomForeColor = true;
             // 
             // metroLabelGozetimPaneli
             // 
@@ -373,7 +412,7 @@
             // metroDateTime1
             // 
             this.metroDateTime1.Location = new System.Drawing.Point(6, 60);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(4, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
             this.metroDateTime1.TabIndex = 0;
@@ -387,9 +426,9 @@
             this.groupBoxCalisanlar.Controls.Add(this.metroLabelToplamOdeme);
             this.groupBoxCalisanlar.Controls.Add(this.metroGridCalisanlar);
             this.groupBoxCalisanlar.Controls.Add(this.metroLabelCalisanlar);
-            this.groupBoxCalisanlar.Location = new System.Drawing.Point(960, 595);
+            this.groupBoxCalisanlar.Location = new System.Drawing.Point(202, 31);
             this.groupBoxCalisanlar.Name = "groupBoxCalisanlar";
-            this.groupBoxCalisanlar.Size = new System.Drawing.Size(815, 587);
+            this.groupBoxCalisanlar.Size = new System.Drawing.Size(839, 727);
             this.groupBoxCalisanlar.TabIndex = 3;
             this.groupBoxCalisanlar.TabStop = false;
             // 
@@ -397,9 +436,9 @@
             // 
             this.metroButtonDurusmalarExcelAktar.BackColor = System.Drawing.Color.PaleGreen;
             this.metroButtonDurusmalarExcelAktar.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButtonDurusmalarExcelAktar.Location = new System.Drawing.Point(574, 281);
+            this.metroButtonDurusmalarExcelAktar.Location = new System.Drawing.Point(137, 466);
             this.metroButtonDurusmalarExcelAktar.Name = "metroButtonDurusmalarExcelAktar";
-            this.metroButtonDurusmalarExcelAktar.Size = new System.Drawing.Size(230, 73);
+            this.metroButtonDurusmalarExcelAktar.Size = new System.Drawing.Size(547, 73);
             this.metroButtonDurusmalarExcelAktar.TabIndex = 9;
             this.metroButtonDurusmalarExcelAktar.Text = "Excel Olarak Dışa Aktar";
             this.metroButtonDurusmalarExcelAktar.UseCustomBackColor = true;
@@ -413,7 +452,7 @@
             this.metroLabelCalisanSayisi.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabelCalisanSayisi.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabelCalisanSayisi.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.metroLabelCalisanSayisi.Location = new System.Drawing.Point(574, 110);
+            this.metroLabelCalisanSayisi.Location = new System.Drawing.Point(73, 404);
             this.metroLabelCalisanSayisi.MinimumSize = new System.Drawing.Size(230, 30);
             this.metroLabelCalisanSayisi.Name = "metroLabelCalisanSayisi";
             this.metroLabelCalisanSayisi.Size = new System.Drawing.Size(216, 25);
@@ -431,7 +470,7 @@
             this.metroLabelToplamOdeme.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabelToplamOdeme.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabelToplamOdeme.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.metroLabelToplamOdeme.Location = new System.Drawing.Point(574, 64);
+            this.metroLabelToplamOdeme.Location = new System.Drawing.Point(525, 404);
             this.metroLabelToplamOdeme.MinimumSize = new System.Drawing.Size(230, 30);
             this.metroLabelToplamOdeme.Name = "metroLabelToplamOdeme";
             this.metroLabelToplamOdeme.Size = new System.Drawing.Size(231, 25);
@@ -449,37 +488,37 @@
             this.metroGridCalisanlar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGridCalisanlar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGridCalisanlar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridCalisanlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridCalisanlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.metroGridCalisanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGridCalisanlar.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGridCalisanlar.DefaultCellStyle = dataGridViewCellStyle5;
             this.metroGridCalisanlar.EnableHeadersVisualStyles = false;
             this.metroGridCalisanlar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGridCalisanlar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGridCalisanlar.Location = new System.Drawing.Point(6, 64);
+            this.metroGridCalisanlar.Location = new System.Drawing.Point(137, 82);
             this.metroGridCalisanlar.Name = "metroGridCalisanlar";
             this.metroGridCalisanlar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridCalisanlar.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridCalisanlar.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.metroGridCalisanlar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGridCalisanlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGridCalisanlar.Size = new System.Drawing.Size(547, 290);
@@ -511,9 +550,9 @@
             this.groupBoxEvraklar.Controls.Add(this.metroLabelDosyaSayisi);
             this.groupBoxEvraklar.Controls.Add(this.metroLabelDosyaBoyutu);
             this.groupBoxEvraklar.Controls.Add(this.metroLabelEvraklar);
-            this.groupBoxEvraklar.Location = new System.Drawing.Point(696, 640);
+            this.groupBoxEvraklar.Location = new System.Drawing.Point(202, 31);
             this.groupBoxEvraklar.Name = "groupBoxEvraklar";
-            this.groupBoxEvraklar.Size = new System.Drawing.Size(817, 587);
+            this.groupBoxEvraklar.Size = new System.Drawing.Size(839, 727);
             this.groupBoxEvraklar.TabIndex = 4;
             this.groupBoxEvraklar.TabStop = false;
             // 
@@ -623,9 +662,9 @@
             this.groupBoxMuvekkiller.Controls.Add(this.metroLabelMuvekkilTC);
             this.groupBoxMuvekkiller.Controls.Add(this.metroGridMuvekkiller);
             this.groupBoxMuvekkiller.Controls.Add(this.metroLabelMuvekkiller);
-            this.groupBoxMuvekkiller.Location = new System.Drawing.Point(547, 640);
+            this.groupBoxMuvekkiller.Location = new System.Drawing.Point(202, 31);
             this.groupBoxMuvekkiller.Name = "groupBoxMuvekkiller";
-            this.groupBoxMuvekkiller.Size = new System.Drawing.Size(829, 587);
+            this.groupBoxMuvekkiller.Size = new System.Drawing.Size(839, 727);
             this.groupBoxMuvekkiller.TabIndex = 5;
             this.groupBoxMuvekkiller.TabStop = false;
             // 
@@ -721,37 +760,37 @@
             this.metroGridMuvekkiller.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGridMuvekkiller.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGridMuvekkiller.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridMuvekkiller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridMuvekkiller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.metroGridMuvekkiller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGridMuvekkiller.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGridMuvekkiller.DefaultCellStyle = dataGridViewCellStyle8;
             this.metroGridMuvekkiller.EnableHeadersVisualStyles = false;
             this.metroGridMuvekkiller.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGridMuvekkiller.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGridMuvekkiller.Location = new System.Drawing.Point(6, 64);
             this.metroGridMuvekkiller.Name = "metroGridMuvekkiller";
             this.metroGridMuvekkiller.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridMuvekkiller.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridMuvekkiller.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.metroGridMuvekkiller.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGridMuvekkiller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGridMuvekkiller.Size = new System.Drawing.Size(547, 290);
@@ -781,9 +820,9 @@
             this.groupBoxTebligatlar.Controls.Add(this.groupBoxUYAP);
             this.groupBoxTebligatlar.Controls.Add(this.metroLabelTebigatlar);
             this.groupBoxTebligatlar.Controls.Add(this.groupBoxUyapPortalTebligatDetay);
-            this.groupBoxTebligatlar.Location = new System.Drawing.Point(356, 525);
+            this.groupBoxTebligatlar.Location = new System.Drawing.Point(202, 31);
             this.groupBoxTebligatlar.Name = "groupBoxTebligatlar";
-            this.groupBoxTebligatlar.Size = new System.Drawing.Size(1195, 721);
+            this.groupBoxTebligatlar.Size = new System.Drawing.Size(839, 727);
             this.groupBoxTebligatlar.TabIndex = 6;
             this.groupBoxTebligatlar.TabStop = false;
             // 
@@ -1122,37 +1161,37 @@
             this.metroGridTebligatDetay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGridTebligatDetay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGridTebligatDetay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridTebligatDetay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridTebligatDetay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.metroGridTebligatDetay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGridTebligatDetay.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGridTebligatDetay.DefaultCellStyle = dataGridViewCellStyle11;
             this.metroGridTebligatDetay.EnableHeadersVisualStyles = false;
             this.metroGridTebligatDetay.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGridTebligatDetay.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGridTebligatDetay.Location = new System.Drawing.Point(6, 131);
             this.metroGridTebligatDetay.Name = "metroGridTebligatDetay";
             this.metroGridTebligatDetay.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridTebligatDetay.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridTebligatDetay.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.metroGridTebligatDetay.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGridTebligatDetay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGridTebligatDetay.Size = new System.Drawing.Size(339, 225);
@@ -1223,7 +1262,7 @@
             this.groupBoxBilgi.Controls.Add(this.metroTextBoxBilgiSifre);
             this.groupBoxBilgi.Controls.Add(this.metroTextBoxBilgiKullaniciAdi);
             this.groupBoxBilgi.Controls.Add(this.metroLabelAdminmi);
-            this.groupBoxBilgi.Controls.Add(this.metroButtonKullaniciGüncellestir);
+            this.groupBoxBilgi.Controls.Add(this.metroButtonKullaniciGuncellestir);
             this.groupBoxBilgi.Controls.Add(this.metroGridBilgiRootKullanicilar);
             this.groupBoxBilgi.Controls.Add(this.metroButtonKullaniciSil);
             this.groupBoxBilgi.Controls.Add(this.metroLabel6);
@@ -1233,11 +1272,193 @@
             this.groupBoxBilgi.Controls.Add(this.metroLabelSifre);
             this.groupBoxBilgi.Controls.Add(this.metroLabelKullaniciAdi);
             this.groupBoxBilgi.Controls.Add(this.metroLabelBilgi);
-            this.groupBoxBilgi.Location = new System.Drawing.Point(202, 21);
+            this.groupBoxBilgi.Location = new System.Drawing.Point(202, 31);
             this.groupBoxBilgi.Name = "groupBoxBilgi";
             this.groupBoxBilgi.Size = new System.Drawing.Size(839, 727);
             this.groupBoxBilgi.TabIndex = 7;
             this.groupBoxBilgi.TabStop = false;
+            // 
+            // metroCheckBoxBilgiAdmin
+            // 
+            this.metroCheckBoxBilgiAdmin.AutoSize = true;
+            this.metroCheckBoxBilgiAdmin.Location = new System.Drawing.Point(191, 545);
+            this.metroCheckBoxBilgiAdmin.MinimumSize = new System.Drawing.Size(200, 30);
+            this.metroCheckBoxBilgiAdmin.Name = "metroCheckBoxBilgiAdmin";
+            this.metroCheckBoxBilgiAdmin.Size = new System.Drawing.Size(200, 30);
+            this.metroCheckBoxBilgiAdmin.TabIndex = 19;
+            this.metroCheckBoxBilgiAdmin.Text = "Admin";
+            this.metroCheckBoxBilgiAdmin.UseSelectable = true;
+            // 
+            // metroTextBoxBilgiSifre
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBoxBilgiSifre.CustomButton.Image = null;
+            this.metroTextBoxBilgiSifre.CustomButton.Location = new System.Drawing.Point(172, 2);
+            this.metroTextBoxBilgiSifre.CustomButton.Name = "";
+            this.metroTextBoxBilgiSifre.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.metroTextBoxBilgiSifre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBoxBilgiSifre.CustomButton.TabIndex = 1;
+            this.metroTextBoxBilgiSifre.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBoxBilgiSifre.CustomButton.UseSelectable = true;
+            this.metroTextBoxBilgiSifre.CustomButton.Visible = false;
+            this.metroTextBoxBilgiSifre.Lines = new string[] {
+        "Şifre Girin"};
+            this.metroTextBoxBilgiSifre.Location = new System.Drawing.Point(191, 490);
+            this.metroTextBoxBilgiSifre.MaxLength = 32767;
+            this.metroTextBoxBilgiSifre.MinimumSize = new System.Drawing.Size(200, 30);
+            this.metroTextBoxBilgiSifre.Name = "metroTextBoxBilgiSifre";
+            this.metroTextBoxBilgiSifre.PasswordChar = '\0';
+            this.metroTextBoxBilgiSifre.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBoxBilgiSifre.SelectedText = "";
+            this.metroTextBoxBilgiSifre.SelectionLength = 0;
+            this.metroTextBoxBilgiSifre.SelectionStart = 0;
+            this.metroTextBoxBilgiSifre.ShortcutsEnabled = true;
+            this.metroTextBoxBilgiSifre.Size = new System.Drawing.Size(200, 30);
+            this.metroTextBoxBilgiSifre.TabIndex = 18;
+            this.metroTextBoxBilgiSifre.Text = "Şifre Girin";
+            this.metroTextBoxBilgiSifre.UseSelectable = true;
+            this.metroTextBoxBilgiSifre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBoxBilgiSifre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroTextBoxBilgiKullaniciAdi
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Image = null;
+            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Location = new System.Drawing.Point(172, 2);
+            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Name = "";
+            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBoxBilgiKullaniciAdi.CustomButton.TabIndex = 1;
+            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBoxBilgiKullaniciAdi.CustomButton.UseSelectable = true;
+            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Visible = false;
+            this.metroTextBoxBilgiKullaniciAdi.Lines = new string[] {
+        "Kullanıcı Adı Girin"};
+            this.metroTextBoxBilgiKullaniciAdi.Location = new System.Drawing.Point(191, 437);
+            this.metroTextBoxBilgiKullaniciAdi.MaxLength = 32767;
+            this.metroTextBoxBilgiKullaniciAdi.MinimumSize = new System.Drawing.Size(200, 30);
+            this.metroTextBoxBilgiKullaniciAdi.Name = "metroTextBoxBilgiKullaniciAdi";
+            this.metroTextBoxBilgiKullaniciAdi.PasswordChar = '\0';
+            this.metroTextBoxBilgiKullaniciAdi.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBoxBilgiKullaniciAdi.SelectedText = "";
+            this.metroTextBoxBilgiKullaniciAdi.SelectionLength = 0;
+            this.metroTextBoxBilgiKullaniciAdi.SelectionStart = 0;
+            this.metroTextBoxBilgiKullaniciAdi.ShortcutsEnabled = true;
+            this.metroTextBoxBilgiKullaniciAdi.Size = new System.Drawing.Size(200, 30);
+            this.metroTextBoxBilgiKullaniciAdi.TabIndex = 17;
+            this.metroTextBoxBilgiKullaniciAdi.Text = "Kullanıcı Adı Girin";
+            this.metroTextBoxBilgiKullaniciAdi.UseSelectable = true;
+            this.metroTextBoxBilgiKullaniciAdi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBoxBilgiKullaniciAdi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabelAdminmi
+            // 
+            this.metroLabelAdminmi.AutoSize = true;
+            this.metroLabelAdminmi.BackColor = System.Drawing.Color.PaleGreen;
+            this.metroLabelAdminmi.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabelAdminmi.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabelAdminmi.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.metroLabelAdminmi.Location = new System.Drawing.Point(14, 545);
+            this.metroLabelAdminmi.MaximumSize = new System.Drawing.Size(170, 30);
+            this.metroLabelAdminmi.MinimumSize = new System.Drawing.Size(170, 30);
+            this.metroLabelAdminmi.Name = "metroLabelAdminmi";
+            this.metroLabelAdminmi.Size = new System.Drawing.Size(94, 25);
+            this.metroLabelAdminmi.Style = MetroFramework.MetroColorStyle.White;
+            this.metroLabelAdminmi.TabIndex = 16;
+            this.metroLabelAdminmi.Text = "Admin mi";
+            this.metroLabelAdminmi.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabelAdminmi.UseCustomBackColor = true;
+            this.metroLabelAdminmi.UseCustomForeColor = true;
+            // 
+            // metroButtonKullaniciGuncellestir
+            // 
+            this.metroButtonKullaniciGuncellestir.BackColor = System.Drawing.Color.DarkOrange;
+            this.metroButtonKullaniciGuncellestir.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButtonKullaniciGuncellestir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.metroButtonKullaniciGuncellestir.Location = new System.Drawing.Point(282, 605);
+            this.metroButtonKullaniciGuncellestir.Name = "metroButtonKullaniciGuncellestir";
+            this.metroButtonKullaniciGuncellestir.Size = new System.Drawing.Size(271, 73);
+            this.metroButtonKullaniciGuncellestir.TabIndex = 15;
+            this.metroButtonKullaniciGuncellestir.Text = "Kullanıcı Bilgilerini GÜNCELLEŞTİR";
+            this.metroButtonKullaniciGuncellestir.UseCustomBackColor = true;
+            this.metroButtonKullaniciGuncellestir.UseCustomForeColor = true;
+            this.metroButtonKullaniciGuncellestir.UseSelectable = true;
+            this.metroButtonKullaniciGuncellestir.Click += new System.EventHandler(this.metroButtonKullaniciGuncellestir_Click);
+            // 
+            // metroGridBilgiRootKullanicilar
+            // 
+            this.metroGridBilgiRootKullanicilar.AllowUserToResizeRows = false;
+            this.metroGridBilgiRootKullanicilar.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.metroGridBilgiRootKullanicilar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGridBilgiRootKullanicilar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGridBilgiRootKullanicilar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridBilgiRootKullanicilar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.metroGridBilgiRootKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGridBilgiRootKullanicilar.DefaultCellStyle = dataGridViewCellStyle14;
+            this.metroGridBilgiRootKullanicilar.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.metroGridBilgiRootKullanicilar.EnableHeadersVisualStyles = false;
+            this.metroGridBilgiRootKullanicilar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGridBilgiRootKullanicilar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGridBilgiRootKullanicilar.Location = new System.Drawing.Point(402, 430);
+            this.metroGridBilgiRootKullanicilar.Name = "metroGridBilgiRootKullanicilar";
+            this.metroGridBilgiRootKullanicilar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridBilgiRootKullanicilar.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.metroGridBilgiRootKullanicilar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGridBilgiRootKullanicilar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGridBilgiRootKullanicilar.Size = new System.Drawing.Size(428, 150);
+            this.metroGridBilgiRootKullanicilar.TabIndex = 14;
+            this.metroGridBilgiRootKullanicilar.SelectionChanged += new System.EventHandler(this.metroGridBilgiRootKullanicilar_SelectionChanged);
+            // 
+            // metroButtonKullaniciSil
+            // 
+            this.metroButtonKullaniciSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.metroButtonKullaniciSil.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButtonKullaniciSil.ForeColor = System.Drawing.Color.White;
+            this.metroButtonKullaniciSil.Location = new System.Drawing.Point(559, 604);
+            this.metroButtonKullaniciSil.Name = "metroButtonKullaniciSil";
+            this.metroButtonKullaniciSil.Size = new System.Drawing.Size(271, 73);
+            this.metroButtonKullaniciSil.TabIndex = 13;
+            this.metroButtonKullaniciSil.Text = "Kullanıcıyı SİL";
+            this.metroButtonKullaniciSil.UseCustomBackColor = true;
+            this.metroButtonKullaniciSil.UseCustomForeColor = true;
+            this.metroButtonKullaniciSil.UseSelectable = true;
+            this.metroButtonKullaniciSil.Click += new System.EventHandler(this.metroButtonKullaniciSil_Click);
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel6.Location = new System.Drawing.Point(319, 684);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(175, 25);
+            this.metroLabel6.TabIndex = 12;
+            this.metroLabel6.Text = "Powered by MAWARE";
+            this.metroLabel6.UseCustomBackColor = true;
             // 
             // metroButtonKullaniciEkle
             // 
@@ -1262,9 +1483,10 @@
             this.metroLabelSifre.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabelSifre.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.metroLabelSifre.Location = new System.Drawing.Point(14, 490);
-            this.metroLabelSifre.MinimumSize = new System.Drawing.Size(180, 30);
+            this.metroLabelSifre.MaximumSize = new System.Drawing.Size(170, 30);
+            this.metroLabelSifre.MinimumSize = new System.Drawing.Size(170, 30);
             this.metroLabelSifre.Name = "metroLabelSifre";
-            this.metroLabelSifre.Size = new System.Drawing.Size(180, 30);
+            this.metroLabelSifre.Size = new System.Drawing.Size(51, 25);
             this.metroLabelSifre.Style = MetroFramework.MetroColorStyle.White;
             this.metroLabelSifre.TabIndex = 8;
             this.metroLabelSifre.Text = "Şifre";
@@ -1280,12 +1502,13 @@
             this.metroLabelKullaniciAdi.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabelKullaniciAdi.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.metroLabelKullaniciAdi.Location = new System.Drawing.Point(14, 437);
-            this.metroLabelKullaniciAdi.MinimumSize = new System.Drawing.Size(180, 30);
+            this.metroLabelKullaniciAdi.MaximumSize = new System.Drawing.Size(170, 30);
+            this.metroLabelKullaniciAdi.MinimumSize = new System.Drawing.Size(170, 30);
             this.metroLabelKullaniciAdi.Name = "metroLabelKullaniciAdi";
-            this.metroLabelKullaniciAdi.Size = new System.Drawing.Size(180, 30);
+            this.metroLabelKullaniciAdi.Size = new System.Drawing.Size(119, 25);
             this.metroLabelKullaniciAdi.Style = MetroFramework.MetroColorStyle.White;
             this.metroLabelKullaniciAdi.TabIndex = 7;
-            this.metroLabelKullaniciAdi.Text = "Kullanıcı Adi";
+            this.metroLabelKullaniciAdi.Text = "Kullanıcı Adı";
             this.metroLabelKullaniciAdi.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLabelKullaniciAdi.UseCustomBackColor = true;
             this.metroLabelKullaniciAdi.UseCustomForeColor = true;
@@ -1304,22 +1527,12 @@
             this.metroLabelBilgi.UseCustomBackColor = true;
             this.metroLabelBilgi.UseStyleColors = true;
             // 
-            // pictureBoxBilgiMaveraYazi
-            // 
-            this.pictureBoxBilgiMaveraYazi.ErrorImage = global::HukukBurosu.Properties.Resources.logo;
-            this.pictureBoxBilgiMaveraYazi.Image = global::HukukBurosu.Properties.Resources.Maverahukuk1;
-            this.pictureBoxBilgiMaveraYazi.Location = new System.Drawing.Point(6, 123);
-            this.pictureBoxBilgiMaveraYazi.Name = "pictureBoxBilgiMaveraYazi";
-            this.pictureBoxBilgiMaveraYazi.Size = new System.Drawing.Size(824, 301);
-            this.pictureBoxBilgiMaveraYazi.TabIndex = 10;
-            this.pictureBoxBilgiMaveraYazi.TabStop = false;
-            // 
             // metroTileCikis
             // 
             this.metroTileCikis.ActiveControl = null;
             this.metroTileCikis.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroTileCikis.ForeColor = System.Drawing.Color.White;
-            this.metroTileCikis.Location = new System.Drawing.Point(10, 628);
+            this.metroTileCikis.Location = new System.Drawing.Point(10, 629);
             this.metroTileCikis.Name = "metroTileCikis";
             this.metroTileCikis.Size = new System.Drawing.Size(183, 89);
             this.metroTileCikis.Style = MetroFramework.MetroColorStyle.Red;
@@ -1342,7 +1555,7 @@
             this.metroTileEvrak.ActiveControl = null;
             this.metroTileEvrak.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroTileEvrak.ForeColor = System.Drawing.Color.White;
-            this.metroTileEvrak.Location = new System.Drawing.Point(10, 236);
+            this.metroTileEvrak.Location = new System.Drawing.Point(10, 237);
             this.metroTileEvrak.Name = "metroTileEvrak";
             this.metroTileEvrak.Size = new System.Drawing.Size(183, 89);
             this.metroTileEvrak.Style = MetroFramework.MetroColorStyle.Red;
@@ -1367,7 +1580,7 @@
             this.metroTileBilgi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
             this.metroTileBilgi.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroTileBilgi.ForeColor = System.Drawing.Color.White;
-            this.metroTileBilgi.Location = new System.Drawing.Point(10, 533);
+            this.metroTileBilgi.Location = new System.Drawing.Point(10, 534);
             this.metroTileBilgi.Name = "metroTileBilgi";
             this.metroTileBilgi.Size = new System.Drawing.Size(183, 89);
             this.metroTileBilgi.Style = MetroFramework.MetroColorStyle.Red;
@@ -1391,7 +1604,7 @@
             this.metroTileTebligatlar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroTileTebligatlar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
             this.metroTileTebligatlar.ForeColor = System.Drawing.Color.White;
-            this.metroTileTebligatlar.Location = new System.Drawing.Point(10, 434);
+            this.metroTileTebligatlar.Location = new System.Drawing.Point(10, 435);
             this.metroTileTebligatlar.Name = "metroTileTebligatlar";
             this.metroTileTebligatlar.Size = new System.Drawing.Size(183, 89);
             this.metroTileTebligatlar.Style = MetroFramework.MetroColorStyle.Red;
@@ -1414,7 +1627,7 @@
             this.metroTileMuvekkiller.ActiveControl = null;
             this.metroTileMuvekkiller.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroTileMuvekkiller.ForeColor = System.Drawing.Color.White;
-            this.metroTileMuvekkiller.Location = new System.Drawing.Point(10, 335);
+            this.metroTileMuvekkiller.Location = new System.Drawing.Point(10, 336);
             this.metroTileMuvekkiller.Name = "metroTileMuvekkiller";
             this.metroTileMuvekkiller.Size = new System.Drawing.Size(183, 89);
             this.metroTileMuvekkiller.Style = MetroFramework.MetroColorStyle.Red;
@@ -1437,7 +1650,7 @@
             this.metroTileGozetimPaneli.ActiveControl = null;
             this.metroTileGozetimPaneli.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroTileGozetimPaneli.ForeColor = System.Drawing.Color.White;
-            this.metroTileGozetimPaneli.Location = new System.Drawing.Point(10, 38);
+            this.metroTileGozetimPaneli.Location = new System.Drawing.Point(10, 39);
             this.metroTileGozetimPaneli.Name = "metroTileGozetimPaneli";
             this.metroTileGozetimPaneli.Size = new System.Drawing.Size(183, 89);
             this.metroTileGozetimPaneli.Style = MetroFramework.MetroColorStyle.Red;
@@ -1460,7 +1673,7 @@
             this.metroTileCalisanlar.ActiveControl = null;
             this.metroTileCalisanlar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroTileCalisanlar.ForeColor = System.Drawing.Color.White;
-            this.metroTileCalisanlar.Location = new System.Drawing.Point(10, 137);
+            this.metroTileCalisanlar.Location = new System.Drawing.Point(10, 138);
             this.metroTileCalisanlar.Name = "metroTileCalisanlar";
             this.metroTileCalisanlar.Size = new System.Drawing.Size(183, 89);
             this.metroTileCalisanlar.Style = MetroFramework.MetroColorStyle.Red;
@@ -1487,197 +1700,32 @@
             this.pictureBoxBilgiMaveraLogo.TabIndex = 11;
             this.pictureBoxBilgiMaveraLogo.TabStop = false;
             // 
-            // metroLabel6
+            // pictureBoxBilgiMaveraYazi
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.Location = new System.Drawing.Point(319, 684);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(175, 25);
-            this.metroLabel6.TabIndex = 12;
-            this.metroLabel6.Text = "Powered by MAWARE";
-            this.metroLabel6.UseCustomBackColor = true;
+            this.pictureBoxBilgiMaveraYazi.ErrorImage = global::HukukBurosu.Properties.Resources.logo;
+            this.pictureBoxBilgiMaveraYazi.Image = global::HukukBurosu.Properties.Resources.Maverahukuk1;
+            this.pictureBoxBilgiMaveraYazi.Location = new System.Drawing.Point(6, 123);
+            this.pictureBoxBilgiMaveraYazi.Name = "pictureBoxBilgiMaveraYazi";
+            this.pictureBoxBilgiMaveraYazi.Size = new System.Drawing.Size(824, 301);
+            this.pictureBoxBilgiMaveraYazi.TabIndex = 10;
+            this.pictureBoxBilgiMaveraYazi.TabStop = false;
             // 
-            // metroButtonKullaniciSil
-            // 
-            this.metroButtonKullaniciSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            this.metroButtonKullaniciSil.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButtonKullaniciSil.ForeColor = System.Drawing.Color.White;
-            this.metroButtonKullaniciSil.Location = new System.Drawing.Point(559, 604);
-            this.metroButtonKullaniciSil.Name = "metroButtonKullaniciSil";
-            this.metroButtonKullaniciSil.Size = new System.Drawing.Size(271, 73);
-            this.metroButtonKullaniciSil.TabIndex = 13;
-            this.metroButtonKullaniciSil.Text = "Kullanıcıyı SİL";
-            this.metroButtonKullaniciSil.UseCustomBackColor = true;
-            this.metroButtonKullaniciSil.UseCustomForeColor = true;
-            this.metroButtonKullaniciSil.UseSelectable = true;
-            // 
-            // metroGridBilgiRootKullanicilar
-            // 
-            this.metroGridBilgiRootKullanicilar.AllowUserToResizeRows = false;
-            this.metroGridBilgiRootKullanicilar.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.metroGridBilgiRootKullanicilar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGridBilgiRootKullanicilar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGridBilgiRootKullanicilar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridBilgiRootKullanicilar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
-            this.metroGridBilgiRootKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGridBilgiRootKullanicilar.DefaultCellStyle = dataGridViewCellStyle29;
-            this.metroGridBilgiRootKullanicilar.EnableHeadersVisualStyles = false;
-            this.metroGridBilgiRootKullanicilar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGridBilgiRootKullanicilar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGridBilgiRootKullanicilar.Location = new System.Drawing.Point(418, 430);
-            this.metroGridBilgiRootKullanicilar.Name = "metroGridBilgiRootKullanicilar";
-            this.metroGridBilgiRootKullanicilar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridBilgiRootKullanicilar.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
-            this.metroGridBilgiRootKullanicilar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGridBilgiRootKullanicilar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGridBilgiRootKullanicilar.Size = new System.Drawing.Size(412, 150);
-            this.metroGridBilgiRootKullanicilar.TabIndex = 14;
-            // 
-            // metroButtonKullaniciGüncellestir
-            // 
-            this.metroButtonKullaniciGüncellestir.BackColor = System.Drawing.Color.DarkOrange;
-            this.metroButtonKullaniciGüncellestir.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButtonKullaniciGüncellestir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroButtonKullaniciGüncellestir.Location = new System.Drawing.Point(282, 605);
-            this.metroButtonKullaniciGüncellestir.Name = "metroButtonKullaniciGüncellestir";
-            this.metroButtonKullaniciGüncellestir.Size = new System.Drawing.Size(271, 73);
-            this.metroButtonKullaniciGüncellestir.TabIndex = 15;
-            this.metroButtonKullaniciGüncellestir.Text = "Kullanıcı Bilgilerini GÜNCELLEŞTİR";
-            this.metroButtonKullaniciGüncellestir.UseCustomBackColor = true;
-            this.metroButtonKullaniciGüncellestir.UseCustomForeColor = true;
-            this.metroButtonKullaniciGüncellestir.UseSelectable = true;
-            // 
-            // metroLabelAdminmi
-            // 
-            this.metroLabelAdminmi.AutoSize = true;
-            this.metroLabelAdminmi.BackColor = System.Drawing.Color.PaleGreen;
-            this.metroLabelAdminmi.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabelAdminmi.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabelAdminmi.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.metroLabelAdminmi.Location = new System.Drawing.Point(14, 545);
-            this.metroLabelAdminmi.MinimumSize = new System.Drawing.Size(180, 30);
-            this.metroLabelAdminmi.Name = "metroLabelAdminmi";
-            this.metroLabelAdminmi.Size = new System.Drawing.Size(180, 30);
-            this.metroLabelAdminmi.Style = MetroFramework.MetroColorStyle.White;
-            this.metroLabelAdminmi.TabIndex = 16;
-            this.metroLabelAdminmi.Text = "Admin mi";
-            this.metroLabelAdminmi.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabelAdminmi.UseCustomBackColor = true;
-            this.metroLabelAdminmi.UseCustomForeColor = true;
-            // 
-            // metroTextBoxBilgiKullaniciAdi
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Image = null;
-            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Location = new System.Drawing.Point(183, 2);
-            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Name = "";
-            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBoxBilgiKullaniciAdi.CustomButton.TabIndex = 1;
-            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBoxBilgiKullaniciAdi.CustomButton.UseSelectable = true;
-            this.metroTextBoxBilgiKullaniciAdi.CustomButton.Visible = false;
-            this.metroTextBoxBilgiKullaniciAdi.Lines = new string[] {
-        "Kullanıcı Adı Girin"};
-            this.metroTextBoxBilgiKullaniciAdi.Location = new System.Drawing.Point(201, 437);
-            this.metroTextBoxBilgiKullaniciAdi.MaxLength = 32767;
-            this.metroTextBoxBilgiKullaniciAdi.MinimumSize = new System.Drawing.Size(211, 30);
-            this.metroTextBoxBilgiKullaniciAdi.Name = "metroTextBoxBilgiKullaniciAdi";
-            this.metroTextBoxBilgiKullaniciAdi.PasswordChar = '\0';
-            this.metroTextBoxBilgiKullaniciAdi.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxBilgiKullaniciAdi.SelectedText = "";
-            this.metroTextBoxBilgiKullaniciAdi.SelectionLength = 0;
-            this.metroTextBoxBilgiKullaniciAdi.SelectionStart = 0;
-            this.metroTextBoxBilgiKullaniciAdi.ShortcutsEnabled = true;
-            this.metroTextBoxBilgiKullaniciAdi.Size = new System.Drawing.Size(211, 30);
-            this.metroTextBoxBilgiKullaniciAdi.TabIndex = 17;
-            this.metroTextBoxBilgiKullaniciAdi.Text = "Kullanıcı Adı Girin";
-            this.metroTextBoxBilgiKullaniciAdi.UseSelectable = true;
-            this.metroTextBoxBilgiKullaniciAdi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBoxBilgiKullaniciAdi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroTextBoxBilgiSifre
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBoxBilgiSifre.CustomButton.Image = null;
-            this.metroTextBoxBilgiSifre.CustomButton.Location = new System.Drawing.Point(183, 2);
-            this.metroTextBoxBilgiSifre.CustomButton.Name = "";
-            this.metroTextBoxBilgiSifre.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBoxBilgiSifre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBoxBilgiSifre.CustomButton.TabIndex = 1;
-            this.metroTextBoxBilgiSifre.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBoxBilgiSifre.CustomButton.UseSelectable = true;
-            this.metroTextBoxBilgiSifre.CustomButton.Visible = false;
-            this.metroTextBoxBilgiSifre.Lines = new string[] {
-        "Şifre Girin"};
-            this.metroTextBoxBilgiSifre.Location = new System.Drawing.Point(201, 490);
-            this.metroTextBoxBilgiSifre.MaxLength = 32767;
-            this.metroTextBoxBilgiSifre.MinimumSize = new System.Drawing.Size(211, 30);
-            this.metroTextBoxBilgiSifre.Name = "metroTextBoxBilgiSifre";
-            this.metroTextBoxBilgiSifre.PasswordChar = '\0';
-            this.metroTextBoxBilgiSifre.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxBilgiSifre.SelectedText = "";
-            this.metroTextBoxBilgiSifre.SelectionLength = 0;
-            this.metroTextBoxBilgiSifre.SelectionStart = 0;
-            this.metroTextBoxBilgiSifre.ShortcutsEnabled = true;
-            this.metroTextBoxBilgiSifre.Size = new System.Drawing.Size(211, 30);
-            this.metroTextBoxBilgiSifre.TabIndex = 18;
-            this.metroTextBoxBilgiSifre.Text = "Şifre Girin";
-            this.metroTextBoxBilgiSifre.UseSelectable = true;
-            this.metroTextBoxBilgiSifre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBoxBilgiSifre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroCheckBoxBilgiAdmin
-            // 
-            this.metroCheckBoxBilgiAdmin.AutoSize = true;
-            this.metroCheckBoxBilgiAdmin.Location = new System.Drawing.Point(201, 545);
-            this.metroCheckBoxBilgiAdmin.MinimumSize = new System.Drawing.Size(211, 30);
-            this.metroCheckBoxBilgiAdmin.Name = "metroCheckBoxBilgiAdmin";
-            this.metroCheckBoxBilgiAdmin.Size = new System.Drawing.Size(211, 30);
-            this.metroCheckBoxBilgiAdmin.TabIndex = 19;
-            this.metroCheckBoxBilgiAdmin.Text = "Admin";
-            this.metroCheckBoxBilgiAdmin.UseSelectable = true;
-            // 
-            // Form1
+            // Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(1043, 749);
+            this.Controls.Add(this.metroPanelMenu);
             this.Controls.Add(this.groupBoxBilgi);
             this.Controls.Add(this.groupBoxGozetimPaneli);
-            this.Controls.Add(this.metroPanelMenu);
             this.Controls.Add(this.groupBoxCalisanlar);
             this.Controls.Add(this.groupBoxEvraklar);
             this.Controls.Add(this.groupBoxMuvekkiller);
             this.Controls.Add(this.groupBoxTebligatlar);
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Panel";
+            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Dashboard";
             this.TransparencyKey = System.Drawing.Color.Coral;
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1686,10 +1734,14 @@
             this.groupBoxGozetimPaneli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridDurusmalar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGozetimPaneli)).EndInit();
+            this.groupBoxMuvekkillerGozetim.ResumeLayout(false);
+            this.groupBoxMuvekkillerGozetim.PerformLayout();
             this.groupBoxCartGider.ResumeLayout(false);
             this.groupBoxCartGider.PerformLayout();
             this.groupBoxCartGelir.ResumeLayout(false);
             this.groupBoxCartGelir.PerformLayout();
+            this.groupBoxCartCalisanlar.ResumeLayout(false);
+            this.groupBoxCartCalisanlar.PerformLayout();
             this.groupBoxCalisanlar.ResumeLayout(false);
             this.groupBoxCalisanlar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridCalisanlar)).EndInit();
@@ -1712,9 +1764,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.metroGridTebligatDetay)).EndInit();
             this.groupBoxBilgi.ResumeLayout(false);
             this.groupBoxBilgi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraYazi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridBilgiRootKullanicilar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraYazi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1796,11 +1848,13 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.PictureBox pictureBoxBilgiMaveraLogo;
         private MetroFramework.Controls.MetroGrid metroGridBilgiRootKullanicilar;
-        private MetroFramework.Controls.MetroButton metroButtonKullaniciGüncellestir;
+        private MetroFramework.Controls.MetroButton metroButtonKullaniciGuncellestir;
         private MetroFramework.Controls.MetroLabel metroLabelAdminmi;
         private MetroFramework.Controls.MetroCheckBox metroCheckBoxBilgiAdmin;
         private MetroFramework.Controls.MetroTextBox metroTextBoxBilgiSifre;
         private MetroFramework.Controls.MetroTextBox metroTextBoxBilgiKullaniciAdi;
+        private MetroFramework.Controls.MetroLabel metroLabelGozetimPaneliMuvekkilSayisi;
+        private MetroFramework.Controls.MetroLabel metroLabelGozetimPaneliCalisanSayisi;
     }
 }
 
