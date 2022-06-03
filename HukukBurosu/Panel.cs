@@ -476,7 +476,7 @@ namespace HukukBurosu
             string cikti = "Dosya Seçilmedi";
             try
             {
-                string text = System.IO.File.ReadAllText(@"evraklar\" + fileListBoxEvraklar.SelectedItem);
+                string text = System.IO.File.ReadAllText(@"evraklar\" + fileListBoxEvraklar.SelectedItem.ToString());
                 size = text.Length;
             }
             catch (System.IO.FileLoadException err)
