@@ -66,7 +66,7 @@ namespace HukukBurosu
             OleDbDataAdapter sorgu;
             DataSet verikumesi = new DataSet();
             baglanti = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0; Data Source=" + databasePath);
-            sorgu = new OleDbDataAdapter("Select " + kolon + " from " + tabloAdi, baglanti);
+            sorgu = new OleDbDataAdapter(sorguStringi, baglanti);
             baglanti.Open();
             sorgu.Fill(verikumesi, tabloAdi);
             baglanti.Close();
@@ -189,9 +189,9 @@ namespace HukukBurosu
         }
 
 
-        private void metroGridDoldur(MetroFramework.Controls.MetroGrid metroGrid, String tabloAdi, String kolonlar = "*")
+        private void metroGridDoldur(MetroFramework.Controls.MetroGrid metroGrid, String tabloAdi, String kolonlar = "*", String where = "")
         {
-            DataSet veri = veritabaniSelectForDataGrid(tabloAdi, kolonlar);
+            DataSet veri = veritabaniSelectForDataGrid(tabloAdi, kolonlar, where);
             metroGrid.DataSource = veri.Tables[tabloAdi];
 
         }
@@ -591,7 +591,11 @@ namespace HukukBurosu
                 MetroFramework.MetroMessageBox.Show(this, "GİRİŞ BAŞARILI");
                 groupBoxUYAP.Visible = false;
                 groupBoxUyapPortalTebligatDetay.Visible = true;
+                metroGridDoldur(metroGridTebligatDetay, "uyap_kullanicilar", "*", "tc_kimlik = '" + metroTextBoxUyapTCKimlik.Text + "'");
+                metroLabelTebligaDetaytİsim.Text = "İsim: Avukat " + metroGridTebligatDetay.Rows[0].Cells[3].Value.ToString();
+                metroLabelTebligAdresi.Text = "Adres: " + metroGridTebligatDetay.Rows[0].Cells[4].Value.ToString();
                 metroGridDoldur(metroGridTebligatDetay, "tebligatlar", "tebligat_no, teblig_tarihi, icerik");
+                
             }
             else
             {
@@ -603,7 +607,7 @@ namespace HukukBurosu
         {
             if (metroGridTebligatDetay.SelectedCells.Count > 0)
             {
-                metroLabelTebligTarihi.Text = "Tebliğ Tarihi: " + metroGridTebligatDetay.SelectedCells[1].Value.ToString();
+                metroLabelTebligTarihi.Text = "Tebliğ Tarihi: " + metroGridTebligatDetay.SelectedCells[1].Value.ToString().Replace("00:00:00","");
                 metroTextBoxTebligatİcerik.Text = metroGridTebligatDetay.SelectedCells[2].Value.ToString();
                 
             }
@@ -683,6 +687,100 @@ namespace HukukBurosu
             }
             
 
+        }
+
+        private void metroButtonDurusmalarExcelAktar_Click(object sender, EventArgs e)
+        {
+            excelAktar(metroGridDurusmalar, "Duruşmalar");
+        }
+
+        private void resimBacgroundDegistir(PictureBox pictureBox, bool mouseUstunde = true, String renk = "red")
+        {
+            if (mouseUstunde)
+            {
+                pictureBox.BackColor = System.Drawing.Color.FromArgb(102, 102, 102);
+            }
+            else
+            {
+                if (renk.Equals("red"))
+                {
+                    pictureBox.BackColor = System.Drawing.Color.FromArgb(209, 17, 65);
+                }
+                else
+                {
+                    pictureBox.BackColor = System.Drawing.Color.FromArgb(152, 251, 152);
+                }
+            }
+        }
+
+        private void metroButtonKullaniciEkle_MouseEnter(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxKullaniciEkle, true, "pale green");
+        }
+
+        private void metroButtonKullaniciEkle_MouseLeave(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxKullaniciEkle, false, "pale green");
+        }
+
+        private void metroButtonKullaniciSil_MouseEnter(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxKullaniciSil, true);
+        }
+
+        private void metroButtonKullaniciSil_MouseLeave(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxKullaniciSil, false);
+        }
+
+        private void metroButtonDurusmalarExcelAktar_MouseEnter(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxExcelDurusmalar, true, "pale green");
+        }
+
+        private void metroButtonDurusmalarExcelAktar_MouseLeave(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxExcelDurusmalar, false, "pale green");
+        }
+
+        private void metroButtonCalisanlarExcelAktar_MouseEnter(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxExcelCalisanlar, true, "pale green");
+        }
+
+        private void metroButtonCalisanlarExcelAktar_MouseLeave(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxExcelCalisanlar, false, "pale green");
+        }
+
+        private void metroButtonDosyaYukle_MouseEnter(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxEvraklarDosyaYukle, true, "pale green");
+        }
+
+        private void metroButtonDosyaYukle_MouseLeave(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxEvraklarDosyaYukle, false, "pale green");
+        }
+
+        private void metroButtonMuvekkillerExcelAktar_MouseEnter(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxExcelAktarMuvekkiller, true, "pale green");
+        }
+
+        private void metroButtonMuvekkillerExcelAktar_MouseLeave(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxExcelAktarMuvekkiller, false, "pale green");
+        }
+
+        private void metroButtonUyapGiris_MouseEnter(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxTebligatlarGirisYap, true);
+        }
+
+        private void metroButtonUyapGiris_MouseLeave(object sender, EventArgs e)
+        {
+            resimBacgroundDegistir(pictureBoxTebligatlarGirisYap, false);
         }
     }
 }

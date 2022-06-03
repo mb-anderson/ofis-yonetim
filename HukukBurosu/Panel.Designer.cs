@@ -50,6 +50,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Panel));
             this.metroPanelMenu = new MetroFramework.Controls.MetroPanel();
             this.groupBoxGozetimPaneli = new System.Windows.Forms.GroupBox();
+            this.metroButtonDurusmalarExcelAktar = new MetroFramework.Controls.MetroButton();
             this.metroLabelNetDurum = new MetroFramework.Controls.MetroLabel();
             this.metroGridDurusmalar = new MetroFramework.Controls.MetroGrid();
             this.chartGozetimPaneli = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -64,7 +65,7 @@
             this.metroLabelGozetimPaneli = new MetroFramework.Controls.MetroLabel();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.groupBoxCalisanlar = new System.Windows.Forms.GroupBox();
-            this.metroButtonDurusmalarExcelAktar = new MetroFramework.Controls.MetroButton();
+            this.metroButtonCalisanlarExcelAktar = new MetroFramework.Controls.MetroButton();
             this.metroLabelCalisanSayisi = new MetroFramework.Controls.MetroLabel();
             this.metroLabelToplamOdeme = new MetroFramework.Controls.MetroLabel();
             this.metroGridCalisanlar = new MetroFramework.Controls.MetroGrid();
@@ -127,8 +128,15 @@
             this.metroTileMuvekkiller = new MetroFramework.Controls.MetroTile();
             this.metroTileGozetimPaneli = new MetroFramework.Controls.MetroTile();
             this.metroTileCalisanlar = new MetroFramework.Controls.MetroTile();
+            this.pictureBoxTebligatlarGirisYap = new System.Windows.Forms.PictureBox();
+            this.pictureBoxKullaniciEkle = new System.Windows.Forms.PictureBox();
+            this.pictureBoxKullaniciSil = new System.Windows.Forms.PictureBox();
             this.pictureBoxBilgiMaveraLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxBilgiMaveraYazi = new System.Windows.Forms.PictureBox();
+            this.pictureBoxExcelDurusmalar = new System.Windows.Forms.PictureBox();
+            this.pictureBoxExcelCalisanlar = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEvraklarDosyaYukle = new System.Windows.Forms.PictureBox();
+            this.pictureBoxExcelAktarMuvekkiller = new System.Windows.Forms.PictureBox();
             this.metroPanelMenu.SuspendLayout();
             this.groupBoxGozetimPaneli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridDurusmalar)).BeginInit();
@@ -151,8 +159,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.metroGridTebligatDetay)).BeginInit();
             this.groupBoxBilgi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridBilgiRootKullanicilar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTebligatlarGirisYap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKullaniciEkle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKullaniciSil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraYazi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcelDurusmalar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcelCalisanlar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEvraklarDosyaYukle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcelAktarMuvekkiller)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanelMenu
@@ -182,6 +197,8 @@
             // 
             this.groupBoxGozetimPaneli.AutoSize = true;
             this.groupBoxGozetimPaneli.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBoxGozetimPaneli.Controls.Add(this.pictureBoxExcelDurusmalar);
+            this.groupBoxGozetimPaneli.Controls.Add(this.metroButtonDurusmalarExcelAktar);
             this.groupBoxGozetimPaneli.Controls.Add(this.metroLabelNetDurum);
             this.groupBoxGozetimPaneli.Controls.Add(this.metroGridDurusmalar);
             this.groupBoxGozetimPaneli.Controls.Add(this.chartGozetimPaneli);
@@ -196,6 +213,21 @@
             this.groupBoxGozetimPaneli.Size = new System.Drawing.Size(839, 727);
             this.groupBoxGozetimPaneli.TabIndex = 2;
             this.groupBoxGozetimPaneli.TabStop = false;
+            // 
+            // metroButtonDurusmalarExcelAktar
+            // 
+            this.metroButtonDurusmalarExcelAktar.BackColor = System.Drawing.Color.PaleGreen;
+            this.metroButtonDurusmalarExcelAktar.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButtonDurusmalarExcelAktar.Location = new System.Drawing.Point(392, 575);
+            this.metroButtonDurusmalarExcelAktar.Name = "metroButtonDurusmalarExcelAktar";
+            this.metroButtonDurusmalarExcelAktar.Size = new System.Drawing.Size(359, 89);
+            this.metroButtonDurusmalarExcelAktar.TabIndex = 10;
+            this.metroButtonDurusmalarExcelAktar.Text = "Excel Olarak Dışa Aktar";
+            this.metroButtonDurusmalarExcelAktar.UseCustomBackColor = true;
+            this.metroButtonDurusmalarExcelAktar.UseSelectable = true;
+            this.metroButtonDurusmalarExcelAktar.Click += new System.EventHandler(this.metroButtonDurusmalarExcelAktar_Click);
+            this.metroButtonDurusmalarExcelAktar.MouseEnter += new System.EventHandler(this.metroButtonDurusmalarExcelAktar_MouseEnter);
+            this.metroButtonDurusmalarExcelAktar.MouseLeave += new System.EventHandler(this.metroButtonDurusmalarExcelAktar_MouseLeave);
             // 
             // metroLabelNetDurum
             // 
@@ -412,7 +444,7 @@
             // metroDateTime1
             // 
             this.metroDateTime1.Location = new System.Drawing.Point(6, 60);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(4, 29);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
             this.metroDateTime1.TabIndex = 0;
@@ -421,7 +453,8 @@
             // 
             this.groupBoxCalisanlar.AutoSize = true;
             this.groupBoxCalisanlar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBoxCalisanlar.Controls.Add(this.metroButtonDurusmalarExcelAktar);
+            this.groupBoxCalisanlar.Controls.Add(this.pictureBoxExcelCalisanlar);
+            this.groupBoxCalisanlar.Controls.Add(this.metroButtonCalisanlarExcelAktar);
             this.groupBoxCalisanlar.Controls.Add(this.metroLabelCalisanSayisi);
             this.groupBoxCalisanlar.Controls.Add(this.metroLabelToplamOdeme);
             this.groupBoxCalisanlar.Controls.Add(this.metroGridCalisanlar);
@@ -432,18 +465,20 @@
             this.groupBoxCalisanlar.TabIndex = 3;
             this.groupBoxCalisanlar.TabStop = false;
             // 
-            // metroButtonDurusmalarExcelAktar
+            // metroButtonCalisanlarExcelAktar
             // 
-            this.metroButtonDurusmalarExcelAktar.BackColor = System.Drawing.Color.PaleGreen;
-            this.metroButtonDurusmalarExcelAktar.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButtonDurusmalarExcelAktar.Location = new System.Drawing.Point(137, 466);
-            this.metroButtonDurusmalarExcelAktar.Name = "metroButtonDurusmalarExcelAktar";
-            this.metroButtonDurusmalarExcelAktar.Size = new System.Drawing.Size(547, 73);
-            this.metroButtonDurusmalarExcelAktar.TabIndex = 9;
-            this.metroButtonDurusmalarExcelAktar.Text = "Excel Olarak Dışa Aktar";
-            this.metroButtonDurusmalarExcelAktar.UseCustomBackColor = true;
-            this.metroButtonDurusmalarExcelAktar.UseSelectable = true;
-            this.metroButtonDurusmalarExcelAktar.Click += new System.EventHandler(this.metroButtonExcelAktar_Click);
+            this.metroButtonCalisanlarExcelAktar.BackColor = System.Drawing.Color.PaleGreen;
+            this.metroButtonCalisanlarExcelAktar.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButtonCalisanlarExcelAktar.Location = new System.Drawing.Point(137, 466);
+            this.metroButtonCalisanlarExcelAktar.Name = "metroButtonCalisanlarExcelAktar";
+            this.metroButtonCalisanlarExcelAktar.Size = new System.Drawing.Size(547, 73);
+            this.metroButtonCalisanlarExcelAktar.TabIndex = 9;
+            this.metroButtonCalisanlarExcelAktar.Text = "Excel Olarak Dışa Aktar";
+            this.metroButtonCalisanlarExcelAktar.UseCustomBackColor = true;
+            this.metroButtonCalisanlarExcelAktar.UseSelectable = true;
+            this.metroButtonCalisanlarExcelAktar.Click += new System.EventHandler(this.metroButtonExcelAktar_Click);
+            this.metroButtonCalisanlarExcelAktar.MouseEnter += new System.EventHandler(this.metroButtonCalisanlarExcelAktar_MouseEnter);
+            this.metroButtonCalisanlarExcelAktar.MouseLeave += new System.EventHandler(this.metroButtonCalisanlarExcelAktar_MouseLeave);
             // 
             // metroLabelCalisanSayisi
             // 
@@ -544,6 +579,7 @@
             // 
             this.groupBoxEvraklar.AutoSize = true;
             this.groupBoxEvraklar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBoxEvraklar.Controls.Add(this.pictureBoxEvraklarDosyaYukle);
             this.groupBoxEvraklar.Controls.Add(this.dirListBoxEvraklar);
             this.groupBoxEvraklar.Controls.Add(this.fileListBoxEvraklar);
             this.groupBoxEvraklar.Controls.Add(this.metroButtonDosyaYukle);
@@ -600,6 +636,8 @@
             this.metroButtonDosyaYukle.Click += new System.EventHandler(this.metroButtonDosyaYukle_Click);
             this.metroButtonDosyaYukle.DragDrop += new System.Windows.Forms.DragEventHandler(this.metroButtonDosyaYukle_DragDrop);
             this.metroButtonDosyaYukle.DragEnter += new System.Windows.Forms.DragEventHandler(this.metroButtonDosyaYukle_DragEnter);
+            this.metroButtonDosyaYukle.MouseEnter += new System.EventHandler(this.metroButtonDosyaYukle_MouseEnter);
+            this.metroButtonDosyaYukle.MouseLeave += new System.EventHandler(this.metroButtonDosyaYukle_MouseLeave);
             // 
             // metroLabelDosyaSayisi
             // 
@@ -655,6 +693,7 @@
             // 
             this.groupBoxMuvekkiller.AutoSize = true;
             this.groupBoxMuvekkiller.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBoxMuvekkiller.Controls.Add(this.pictureBoxExcelAktarMuvekkiller);
             this.groupBoxMuvekkiller.Controls.Add(this.metroLabelMuvekkilSoyad);
             this.groupBoxMuvekkiller.Controls.Add(this.metroLabelMuvekkilTelefon);
             this.groupBoxMuvekkiller.Controls.Add(this.metroButtonMuvekkillerExcelAktar);
@@ -716,6 +755,8 @@
             this.metroButtonMuvekkillerExcelAktar.UseCustomBackColor = true;
             this.metroButtonMuvekkillerExcelAktar.UseSelectable = true;
             this.metroButtonMuvekkillerExcelAktar.Click += new System.EventHandler(this.metroButtonMuvekkillerExcelAktar_Click);
+            this.metroButtonMuvekkillerExcelAktar.MouseEnter += new System.EventHandler(this.metroButtonMuvekkillerExcelAktar_MouseEnter);
+            this.metroButtonMuvekkillerExcelAktar.MouseLeave += new System.EventHandler(this.metroButtonMuvekkillerExcelAktar_MouseLeave);
             // 
             // metroLabelMuvekkilAd
             // 
@@ -828,6 +869,7 @@
             // 
             // groupBoxUYAP
             // 
+            this.groupBoxUYAP.Controls.Add(this.pictureBoxTebligatlarGirisYap);
             this.groupBoxUYAP.Controls.Add(this.groupBoxUYAPPortal);
             this.groupBoxUYAP.Controls.Add(this.metroButtonUyapGiris);
             this.groupBoxUYAP.Location = new System.Drawing.Point(13, 43);
@@ -1025,6 +1067,8 @@
             this.metroButtonUyapGiris.UseCustomForeColor = true;
             this.metroButtonUyapGiris.UseSelectable = true;
             this.metroButtonUyapGiris.Click += new System.EventHandler(this.metroButtonUyapGiris_Click);
+            this.metroButtonUyapGiris.MouseEnter += new System.EventHandler(this.metroButtonUyapGiris_MouseEnter);
+            this.metroButtonUyapGiris.MouseLeave += new System.EventHandler(this.metroButtonUyapGiris_MouseLeave);
             // 
             // metroLabelTebigatlar
             // 
@@ -1258,6 +1302,8 @@
             // 
             this.groupBoxBilgi.AutoSize = true;
             this.groupBoxBilgi.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBoxBilgi.Controls.Add(this.pictureBoxKullaniciEkle);
+            this.groupBoxBilgi.Controls.Add(this.pictureBoxKullaniciSil);
             this.groupBoxBilgi.Controls.Add(this.metroCheckBoxBilgiAdmin);
             this.groupBoxBilgi.Controls.Add(this.metroTextBoxBilgiSifre);
             this.groupBoxBilgi.Controls.Add(this.metroTextBoxBilgiKullaniciAdi);
@@ -1274,7 +1320,7 @@
             this.groupBoxBilgi.Controls.Add(this.metroLabelBilgi);
             this.groupBoxBilgi.Location = new System.Drawing.Point(202, 31);
             this.groupBoxBilgi.Name = "groupBoxBilgi";
-            this.groupBoxBilgi.Size = new System.Drawing.Size(839, 727);
+            this.groupBoxBilgi.Size = new System.Drawing.Size(839, 740);
             this.groupBoxBilgi.TabIndex = 7;
             this.groupBoxBilgi.TabStop = false;
             // 
@@ -1379,9 +1425,9 @@
             this.metroButtonKullaniciGuncellestir.BackColor = System.Drawing.Color.DarkOrange;
             this.metroButtonKullaniciGuncellestir.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.metroButtonKullaniciGuncellestir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroButtonKullaniciGuncellestir.Location = new System.Drawing.Point(282, 605);
+            this.metroButtonKullaniciGuncellestir.Location = new System.Drawing.Point(271, 605);
             this.metroButtonKullaniciGuncellestir.Name = "metroButtonKullaniciGuncellestir";
-            this.metroButtonKullaniciGuncellestir.Size = new System.Drawing.Size(271, 73);
+            this.metroButtonKullaniciGuncellestir.Size = new System.Drawing.Size(282, 73);
             this.metroButtonKullaniciGuncellestir.TabIndex = 15;
             this.metroButtonKullaniciGuncellestir.Text = "Kullanıcı Bilgilerini GÜNCELLEŞTİR";
             this.metroButtonKullaniciGuncellestir.UseCustomBackColor = true;
@@ -1448,6 +1494,8 @@
             this.metroButtonKullaniciSil.UseCustomForeColor = true;
             this.metroButtonKullaniciSil.UseSelectable = true;
             this.metroButtonKullaniciSil.Click += new System.EventHandler(this.metroButtonKullaniciSil_Click);
+            this.metroButtonKullaniciSil.MouseEnter += new System.EventHandler(this.metroButtonKullaniciSil_MouseEnter);
+            this.metroButtonKullaniciSil.MouseLeave += new System.EventHandler(this.metroButtonKullaniciSil_MouseLeave);
             // 
             // metroLabel6
             // 
@@ -1467,13 +1515,15 @@
             this.metroButtonKullaniciEkle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.metroButtonKullaniciEkle.Location = new System.Drawing.Point(6, 605);
             this.metroButtonKullaniciEkle.Name = "metroButtonKullaniciEkle";
-            this.metroButtonKullaniciEkle.Size = new System.Drawing.Size(270, 73);
+            this.metroButtonKullaniciEkle.Size = new System.Drawing.Size(256, 73);
             this.metroButtonKullaniciEkle.TabIndex = 9;
             this.metroButtonKullaniciEkle.Text = "Kullanıcı EKLE";
             this.metroButtonKullaniciEkle.UseCustomBackColor = true;
             this.metroButtonKullaniciEkle.UseCustomForeColor = true;
             this.metroButtonKullaniciEkle.UseSelectable = true;
             this.metroButtonKullaniciEkle.Click += new System.EventHandler(this.metroButtonKullaniciEkle_Click);
+            this.metroButtonKullaniciEkle.MouseEnter += new System.EventHandler(this.metroButtonKullaniciEkle_MouseEnter);
+            this.metroButtonKullaniciEkle.MouseLeave += new System.EventHandler(this.metroButtonKullaniciEkle_MouseLeave);
             // 
             // metroLabelSifre
             // 
@@ -1691,6 +1741,39 @@
             this.metroTileCalisanlar.MouseEnter += new System.EventHandler(this.metroTileCalisanlar_MouseEnter);
             this.metroTileCalisanlar.MouseLeave += new System.EventHandler(this.metroTileCalisanlar_MouseLeave);
             // 
+            // pictureBoxTebligatlarGirisYap
+            // 
+            this.pictureBoxTebligatlarGirisYap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.pictureBoxTebligatlarGirisYap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxTebligatlarGirisYap.Image = global::HukukBurosu.Properties.Resources.right_to_bracket;
+            this.pictureBoxTebligatlarGirisYap.Location = new System.Drawing.Point(451, 423);
+            this.pictureBoxTebligatlarGirisYap.Name = "pictureBoxTebligatlarGirisYap";
+            this.pictureBoxTebligatlarGirisYap.Size = new System.Drawing.Size(74, 75);
+            this.pictureBoxTebligatlarGirisYap.TabIndex = 15;
+            this.pictureBoxTebligatlarGirisYap.TabStop = false;
+            // 
+            // pictureBoxKullaniciEkle
+            // 
+            this.pictureBoxKullaniciEkle.BackColor = System.Drawing.Color.PaleGreen;
+            this.pictureBoxKullaniciEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxKullaniciEkle.Image = global::HukukBurosu.Properties.Resources.user_plus1;
+            this.pictureBoxKullaniciEkle.Location = new System.Drawing.Point(16, 614);
+            this.pictureBoxKullaniciEkle.Name = "pictureBoxKullaniciEkle";
+            this.pictureBoxKullaniciEkle.Size = new System.Drawing.Size(51, 50);
+            this.pictureBoxKullaniciEkle.TabIndex = 21;
+            this.pictureBoxKullaniciEkle.TabStop = false;
+            // 
+            // pictureBoxKullaniciSil
+            // 
+            this.pictureBoxKullaniciSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.pictureBoxKullaniciSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxKullaniciSil.Image = global::HukukBurosu.Properties.Resources.trash_solid1;
+            this.pictureBoxKullaniciSil.Location = new System.Drawing.Point(580, 614);
+            this.pictureBoxKullaniciSil.Name = "pictureBoxKullaniciSil";
+            this.pictureBoxKullaniciSil.Size = new System.Drawing.Size(51, 50);
+            this.pictureBoxKullaniciSil.TabIndex = 20;
+            this.pictureBoxKullaniciSil.TabStop = false;
+            // 
             // pictureBoxBilgiMaveraLogo
             // 
             this.pictureBoxBilgiMaveraLogo.Image = global::HukukBurosu.Properties.Resources.logo;
@@ -1710,6 +1793,50 @@
             this.pictureBoxBilgiMaveraYazi.TabIndex = 10;
             this.pictureBoxBilgiMaveraYazi.TabStop = false;
             // 
+            // pictureBoxExcelDurusmalar
+            // 
+            this.pictureBoxExcelDurusmalar.BackColor = System.Drawing.Color.PaleGreen;
+            this.pictureBoxExcelDurusmalar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxExcelDurusmalar.Image = global::HukukBurosu.Properties.Resources.file_excel_solid;
+            this.pictureBoxExcelDurusmalar.Location = new System.Drawing.Point(411, 586);
+            this.pictureBoxExcelDurusmalar.Name = "pictureBoxExcelDurusmalar";
+            this.pictureBoxExcelDurusmalar.Size = new System.Drawing.Size(60, 62);
+            this.pictureBoxExcelDurusmalar.TabIndex = 11;
+            this.pictureBoxExcelDurusmalar.TabStop = false;
+            // 
+            // pictureBoxExcelCalisanlar
+            // 
+            this.pictureBoxExcelCalisanlar.BackColor = System.Drawing.Color.PaleGreen;
+            this.pictureBoxExcelCalisanlar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxExcelCalisanlar.Image = global::HukukBurosu.Properties.Resources.file_excel_solid;
+            this.pictureBoxExcelCalisanlar.Location = new System.Drawing.Point(248, 473);
+            this.pictureBoxExcelCalisanlar.Name = "pictureBoxExcelCalisanlar";
+            this.pictureBoxExcelCalisanlar.Size = new System.Drawing.Size(60, 62);
+            this.pictureBoxExcelCalisanlar.TabIndex = 12;
+            this.pictureBoxExcelCalisanlar.TabStop = false;
+            // 
+            // pictureBoxEvraklarDosyaYukle
+            // 
+            this.pictureBoxEvraklarDosyaYukle.BackColor = System.Drawing.Color.PaleGreen;
+            this.pictureBoxEvraklarDosyaYukle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxEvraklarDosyaYukle.Image = global::HukukBurosu.Properties.Resources.file_archive_solid;
+            this.pictureBoxEvraklarDosyaYukle.Location = new System.Drawing.Point(229, 432);
+            this.pictureBoxEvraklarDosyaYukle.Name = "pictureBoxEvraklarDosyaYukle";
+            this.pictureBoxEvraklarDosyaYukle.Size = new System.Drawing.Size(60, 62);
+            this.pictureBoxEvraklarDosyaYukle.TabIndex = 12;
+            this.pictureBoxEvraklarDosyaYukle.TabStop = false;
+            // 
+            // pictureBoxExcelAktarMuvekkiller
+            // 
+            this.pictureBoxExcelAktarMuvekkiller.BackColor = System.Drawing.Color.PaleGreen;
+            this.pictureBoxExcelAktarMuvekkiller.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxExcelAktarMuvekkiller.Image = global::HukukBurosu.Properties.Resources.file_excel_solid;
+            this.pictureBoxExcelAktarMuvekkiller.Location = new System.Drawing.Point(117, 430);
+            this.pictureBoxExcelAktarMuvekkiller.Name = "pictureBoxExcelAktarMuvekkiller";
+            this.pictureBoxExcelAktarMuvekkiller.Size = new System.Drawing.Size(60, 62);
+            this.pictureBoxExcelAktarMuvekkiller.TabIndex = 12;
+            this.pictureBoxExcelAktarMuvekkiller.TabStop = false;
+            // 
             // Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1717,12 +1844,12 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(1043, 749);
             this.Controls.Add(this.metroPanelMenu);
-            this.Controls.Add(this.groupBoxBilgi);
             this.Controls.Add(this.groupBoxGozetimPaneli);
             this.Controls.Add(this.groupBoxCalisanlar);
             this.Controls.Add(this.groupBoxEvraklar);
             this.Controls.Add(this.groupBoxMuvekkiller);
             this.Controls.Add(this.groupBoxTebligatlar);
+            this.Controls.Add(this.groupBoxBilgi);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Panel";
             this.Style = MetroFramework.MetroColorStyle.Red;
@@ -1765,8 +1892,15 @@
             this.groupBoxBilgi.ResumeLayout(false);
             this.groupBoxBilgi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridBilgiRootKullanicilar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTebligatlarGirisYap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKullaniciEkle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKullaniciSil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBilgiMaveraYazi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcelDurusmalar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcelCalisanlar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEvraklarDosyaYukle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcelAktarMuvekkiller)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1799,7 +1933,7 @@
         private MetroFramework.Controls.MetroLabel metroLabelCalisanlar;
         private MetroFramework.Controls.MetroLabel metroLabelCalisanSayisi;
         private MetroFramework.Controls.MetroTile metroTileCikis;
-        private MetroFramework.Controls.MetroButton metroButtonDurusmalarExcelAktar;
+        private MetroFramework.Controls.MetroButton metroButtonCalisanlarExcelAktar;
         private System.Windows.Forms.GroupBox groupBoxEvraklar;
         private MetroFramework.Controls.MetroButton metroButtonDosyaYukle;
         private MetroFramework.Controls.MetroLabel metroLabelDosyaSayisi;
@@ -1855,6 +1989,14 @@
         private MetroFramework.Controls.MetroTextBox metroTextBoxBilgiKullaniciAdi;
         private MetroFramework.Controls.MetroLabel metroLabelGozetimPaneliMuvekkilSayisi;
         private MetroFramework.Controls.MetroLabel metroLabelGozetimPaneliCalisanSayisi;
+        private MetroFramework.Controls.MetroButton metroButtonDurusmalarExcelAktar;
+        private System.Windows.Forms.PictureBox pictureBoxExcelDurusmalar;
+        private System.Windows.Forms.PictureBox pictureBoxExcelCalisanlar;
+        private System.Windows.Forms.PictureBox pictureBoxEvraklarDosyaYukle;
+        private System.Windows.Forms.PictureBox pictureBoxExcelAktarMuvekkiller;
+        private System.Windows.Forms.PictureBox pictureBoxTebligatlarGirisYap;
+        private System.Windows.Forms.PictureBox pictureBoxKullaniciSil;
+        private System.Windows.Forms.PictureBox pictureBoxKullaniciEkle;
     }
 }
 

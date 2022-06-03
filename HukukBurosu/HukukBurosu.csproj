@@ -160,5 +160,38 @@
   <ItemGroup>
     <None Include="Resources\Maverahukuk4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-excel-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-archive-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-to-bracket-Pale-Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-to-bracket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-solid1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-to-bracket 40px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

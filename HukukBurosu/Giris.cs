@@ -21,6 +21,7 @@ namespace HukukBurosu
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
+            metroTextBoxKullaniciAdi.Select();
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -61,6 +62,18 @@ namespace HukukBurosu
                 MetroFramework.MetroMessageBox.Show(this,"Kullanıcı Adı veya Şifre Hatalı");
             }
         }
+
+        private void metroButtonGiris_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBoxGirisYap.BackColor = System.Drawing.Color.FromArgb(102, 102, 102);
+        }
+
+        private void metroButtonGiris_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxGirisYap.BackColor = System.Drawing.Color.FromArgb(209, 17, 65);
+        }
+
+        
             
 
     }
